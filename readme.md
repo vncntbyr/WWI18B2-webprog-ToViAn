@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-Hier steht noch einzufügender Text
-Hallo TEST
 =======
 
 Dieses Projekt wird sich mit der Darstellung eines Hardware-Verleihs beschäftigen!
