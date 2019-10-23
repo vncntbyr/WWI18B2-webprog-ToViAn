@@ -11,50 +11,66 @@ class Database {
                 img:        "xxx",
                 name:       "Laptop",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "medium",
             },{
                 id:          2,
                 img:        "xxx",
                 name:       "Smartphone",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "small",
             },{
                 id:          3,
                 img:        "xxx",
                 name:       "Drohne",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "large",
             },{
                 id:          4,
                 img:        "xxx",
                 name:       "Tastatur",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "medium",
             },{
                 id:          5,
                 img:        "xxx",
-                name:       "Laptop",
+                name:       "Kamera",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "medium",
             },{
                 id:          6,
                 img:        "xxx",
                 name:       "Maus",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "small",
             },{
                 id:          7,
                 img:        "xxx",
                 name:       "Bildschirm",
                 preis:      "299.99",
-                waehrung:   "Euro";
-                status:     "available"
+                currency:   "Euro";
+                status:     "available",
+                size:       "large",
+            },
+            {
+                id:         8,
+                img:        "xxx",
+                name:       "Stativ",
+                preis:      "299.99",
+                currency:   "Euro";
+                status:     "available",
+                size:       "large",
             },
         ];
     }
