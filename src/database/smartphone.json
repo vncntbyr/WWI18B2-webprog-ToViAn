@@ -3,6 +3,6 @@
     img:        "xxx",
     name:       "Smartphone",
     preis:      "299.99",
-    waehrung:   "Euro";
+    waehrung:   "Euro",
     status:     "available"
 }

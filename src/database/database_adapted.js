@@ -11,7 +11,7 @@ class Database {
                 img:        "xxx",
                 name:       "Laptop",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "medium",
             },{
@@ -19,7 +19,7 @@ class Database {
                 img:        "xxx",
                 name:       "Smartphone",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "small",
             },{
@@ -27,7 +27,7 @@ class Database {
                 img:        "xxx",
                 name:       "Drohne",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "large",
             },{
@@ -35,7 +35,7 @@ class Database {
                 img:        "xxx",
                 name:       "Tastatur",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "medium",
             },{
@@ -43,7 +43,7 @@ class Database {
                 img:        "xxx",
                 name:       "Kamera",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "medium",
             },{
@@ -51,7 +51,7 @@ class Database {
                 img:        "xxx",
                 name:       "Maus",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "small",
             },{
@@ -59,7 +59,7 @@ class Database {
                 img:        "xxx",
                 name:       "Bildschirm",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "large",
             },
@@ -68,7 +68,7 @@ class Database {
                 img:        "xxx",
                 name:       "Stativ",
                 preis:      "299.99",
-                currency:   "Euro";
+                currency:   "Euro",
                 status:     "available",
                 size:       "large",
             },
