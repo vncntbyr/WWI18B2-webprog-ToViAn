@@ -1,0 +1,8 @@
+{
+    id:          1,
+    img:        "xxx",
+    name:       "Laptop",
+    preis:      "299.99",
+    waehrung:   "Euro";
+    status:     "available"
+}
