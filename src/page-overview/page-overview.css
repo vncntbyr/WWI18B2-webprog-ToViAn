@@ -2,21 +2,17 @@
  * Stylesheet zur Klasse PageOverview: Startseite der App
  */
 
+  /* Einzelne Kacheln */
+
 .tile {
     display: inline-block;
-
-    border: 1px solid lightgrey;
-    background: rgba(250, 250, 250);
-    padding: 0.5em;
+    background: rgba(36, 16, 90);
     margin: 0.5em;
-
-    transition: transform 0.5s, background 0.5s;
-    transform: scale(1);
 }
 
 .tile img {
-    width: 20em;
-    height: 20em;
+    width: 18.5em;
+    height: 10em;
     max-width: 100%;
     object-fit: cover;
     display: block;
@@ -26,10 +22,4 @@
 .tile a:visited {
     color: black;
     text-decoration: none;
-}
-
-.tile:hover {
-    background: white;
-    transform: scale(1.01) rotate(0.5deg);
-    cursor: pointer;
 }

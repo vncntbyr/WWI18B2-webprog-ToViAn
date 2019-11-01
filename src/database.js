@@ -18,7 +18,7 @@ class Database {
             {
                 id:          1,
                 img:        "boats/1.jpg",
-                name:       "Petrine",
+                name:       "Apple",
                 typ:        "Ewer",
                 stapellauf: 1909,
                 verbleib:   "In Fahrt",
@@ -26,7 +26,7 @@ class Database {
             },{
                 id:          2,
                 img:        "boats/2.jpg",
-                name:       "Falado",
+                name:       "Microsoft",
                 typ:        "Brigatine",
                 stapellauf: 1968,
                 verbleib:   "Westlich von Island gesunken",
@@ -34,7 +34,7 @@ class Database {
             },{
                 id:          3,
                 img:        "boats/3.jpg",
-                name:       "Gorch Fock",
+                name:       "Dell",
                 typ:        "Segelschiff",
                 stapellauf: 1958,
                 verbleib:   "In Fahrt",
@@ -42,7 +42,7 @@ class Database {
             },{
                 id:          4,
                 img:        "boats/4.jpg",
-                name:       "Mare Frisium",
+                name:       "HP",
                 typ:        "Dreimastmarstoppsegelschoner",
                 stapellauf: 1916,
                 verbleib:   "In Fahrt",
@@ -50,7 +50,7 @@ class Database {
             },{
                 id:          5,
                 img:        "boats/5.jpg",
-                name:       "Preußen",
+                name:       "Huawei",
                 typ:        "Frachtsegler",
                 stapellauf: 1902,
                 verbleib:   "Kollision im Ärmelkanal",
@@ -64,13 +64,29 @@ class Database {
                 verbleib:   "Museum im Portsmouth",
                 link:       "https://de.wikipedia.org/wiki/HMS_Victory",
             },{
-                id:          7,
-                img:        "boats/7.jpg",
-                name:       "Schulschiff Deutschland",
-                typ:        "Segelschulschiff",
-                stapellauf: 1927,
-                verbleib:   "Kulturdenkmal in Bremen-Vegesack",
-                link:       "https://de.wikipedia.org/wiki/Schulschiff_Deutschland",
+                id:          2,
+                img:        "boats/2.jpg",
+                name:       "Falado",
+                typ:        "Brigatine",
+                stapellauf: 1968,
+                verbleib:   "Westlich von Island gesunken",
+                link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
+            },{
+                id:          2,
+                img:        "boats/2.jpg",
+                name:       "Falado",
+                typ:        "Brigatine",
+                stapellauf: 1968,
+                verbleib:   "Westlich von Island gesunken",
+                link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
+            },{
+                id:          2,
+                img:        "boats/2.jpg",
+                name:       "Falado",
+                typ:        "Brigatine",
+                stapellauf: 1968,
+                verbleib:   "Westlich von Island gesunken",
+                link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
             },
         ];
     }
