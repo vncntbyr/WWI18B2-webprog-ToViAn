@@ -25,7 +25,7 @@ class Database {
                 link:       "https://de.wikipedia.org/wiki/Petrine",
             },{
                 id:          2,
-                img:        "Laptop/Laptop.png",
+                img:        "images/Laptop.png",
                 name:       "Laptop",
                 typ:        "Brigatine",
                 stapellauf: 1968,
@@ -33,7 +33,7 @@ class Database {
                 link:       "https://de.wikipedia.org/wiki/Falado_von_Rhodos",
             },{
                 id:          3,
-                img:        "Maus/Maus.png",
+                img:        "images/Maus.png",
                 name:       "Maus",
                 typ:        "Segelschiff",
                 stapellauf: 1958,
