@@ -55,10 +55,10 @@ class PageDetail {
         // Platzhalter mit den eingelesenen Daten ersetzen
         html = html.replace(/{IMG}/g, this._data.img);
         html = html.replace(/{NAME}/g, this._data.name);
-        html = html.replace(/{TYP}/g, this._data.typ);
-        html = html.replace(/{STAPELLAUF}/g, this._data.stapellauf);
-        html = html.replace(/{VERBLEIB}/g, this._data.verbleib);
-        html = html.replace(/{LINK}/g, this._data.link);
+        html = html.replace(/{PREIS}/g, this._data.preis);
+        html = html.replace(/{CURRENCY}/g, this._data.currency);
+        html = html.replace(/{STATUS}/g, this._data.status);
+        
 
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
         // DOM-Methoden von JavaScript weiterbearbeiten können
@@ -67,7 +67,7 @@ class PageDetail {
 
         // Event Handler für den Button registrieren
         pageDom.querySelectorAll(".id").forEach(e => e.textContent = this._recordId);
-        pageDom.querySelector("#show-more-button").addEventListener("click", () => this._onShowMoreButtonClicked());
+        //pageDom.querySelector("#show-more-button").addEventListener("click", () => this._onShowMoreButtonClicked());
 
         // Fertig bearbeitetes HTML-Element zurückgeben
         return pageDom;
@@ -77,7 +77,5 @@ class PageDetail {
      * Beispiel für einen einfachen Event Handler, der bei Klick auf einen
      * Button aufgerufen wird.
      */
-    _onShowMoreButtonClicked() {
-        alert(this._data.name);
-    }
+
 }

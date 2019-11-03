@@ -1,60 +1,35 @@
 <header>
-    <div class="page-heading">
-        <img src="{IMG}" alt="" />
-        <div>
-            <h1>{NAME}</h1>
 
-            <div class="boat-info">
-                <div class="field">
-                    <div class="label">
-                        Typ:
-                    </div>
-                    <div class="value">
-                        {TYP}
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="label">
-                        Stapellauf:
-                    </div>
-                    <div class="value">
-                        {STAPELLAUF}
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="label">
-                        Verbleib:
-                    </div>
-                    <div class="value">
-                        {VERBLEIB}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <ul class="tab-buttons">
-        <li class="active">
-            Übersicht
-        </li>
-        <li>
-            Detailbeschreibung
-        </li>
-        <li>
-            Fotogallerie
-        </li>
-    </ul>
 </header>
 
 <main>
-    <img src="{IMG}" alt="" />
-    
-    <p>
-        Hier sollten irgendwelche Details zum Segelschiff {NAME} stehen. <br />
-        Stattdessen gibt es hier nur einen Link zum
-        <a href="{LINK}" target="_blank">Wikipedia-Artikel</a>.
-    </p>
-    <button id="show-more-button">Und einen Button</button>
+  <div class="container">
+
+        <div class="imgBX">
+        <img src="{IMG}" alt="" />
+        <p>
+</p>
+        </div>
+
+        <div class="details">
+            <div class="content">
+              <h2>{NAME}<br><span>
+
+                <span class="sternebewertung">
+                 <input type="radio" id="stern5" name="bewertung" value="5"><label for="stern5" title="5 Sterne">5 Sterne</label>
+                 <input type="radio" id="stern4" name="bewertung" value="4"><label for="stern4" title="4 Sterne">4 Sterne</label>
+                 <input type="radio" id="stern3" name="bewertung" value="3"><label for="stern3" title="3 Sterne">3 Sterne</label>
+                 <input type="radio" id="stern2" name="bewertung" value="2"><label for="stern2" title="2 Sterne">2 Sterne</label>
+                 <input type="radio" id="stern1" name="bewertung" value="1"><label for="stern1" title="1 Stern">1 Stern</label>
+
+             </span></h2>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h3>{PREIS} {CURRENCY}</h3>
+              <button>Jetzt leihen</button>
+            </div>
+        </div>
+  </div>
+
+
 </main>
