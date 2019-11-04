@@ -1,6 +1,11 @@
+
+.login-field{
+    font-size: 28px;
 }
 .box {
-    width: 300px;
+    display:block;
+    width: 50em;
+    :50em;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -18,18 +23,19 @@
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     text-align: center;
     border: 2px solid #E38609;
-    padding: 14px 10px;
-    width: 200px;
+    padding: 19px 32px;
+    width: 20em;
     outline: none;
     color: white;
     border-radius: 24px; /* macht rund */
     transition: 0.25s;
+    placeholde
 }
 .box input[type= "text"]:focus, .box input[type = "password"]:focus {
-    width: 280px;
+    width: 30em;
     border-color: #00B29F;
 }
 .box input[type= "submit"] {
@@ -37,6 +43,7 @@
     background: none;
     display: block;
     margin: 20px auto;
+    font-size:1em;
     text-align: center;
     border: 2px solid #00B29F;
     padding: 14px 40px;
@@ -48,5 +55,27 @@
     cursor: pointer;
 }
 .box input[type= "submit"]:hover {
-    background: #2ecc71;
+    background: #00B29F;
+}
+/* Placeholder Größe */
+/*Chrome/Opera/Safari*/
+.box input[type= "text"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder {
+    font-size:2em;
+}
+/*Mozilla Firefox 19+*/
+.box input[type= "text"]::-moz-placeholder, .box input[type = "password"]::-moz-placeholder {
+    font-size:2em;
+}
+/*Internet Explorer*/
+.box input[type= "text"]:-ms-input-placeholder, .box input[type = "password"]:-ms-input-placeholder {
+    font-size:2em;
+}
+/*Mozilla Firefox 18-*/
+.box input[type= "text"]:-moz-placeholder, .box input[type = "password"]:-moz-placeholder {
+    font-size:2em;
+}
+main a{
+    color: white;
+    text-decoration: none;
+    text
 }

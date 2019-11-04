@@ -1,9 +1,9 @@
 "use strict";
 
 /**
-*   Klasse PageLogin:Ermöglicht dem Benutzer das Anmelden
+*   Klasse PageRegister:Ermöglicht dem Benutzer das Registrieren
 **/
-class PageLogin {
+class PageRegister {
     /**
      * Konstruktor
      * @param {App} app Zentrale Instanz der App-Klasse
@@ -17,8 +17,8 @@ class PageLogin {
      */
     async show(matches) {
         // Anzuzeigenden Seiteninhalt nachladen
-        let html = await fetch("page-login/page-login.html");
-        let css = await fetch("page-login/page-login.css");
+        let html = await fetch("page-register/page-register.html");
+        let css = await fetch("page-register/page-register.css");
 
         if (html.ok && css.ok) {
             html = await html.text();
@@ -32,9 +32,9 @@ class PageLogin {
 
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
-        
 
-        this._app.setPageTitle("R&C - Login");
+
+        this._app.setPageTitle("Passwort zurücksetzen");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));

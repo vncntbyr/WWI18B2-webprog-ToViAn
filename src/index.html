@@ -18,6 +18,7 @@
         <script src="page-detail/page-detail.js"></script>
         <script src="page-not-found/page-not-found.js"></script>
         <script src="page-login/page-login.js"></script>
+        <script src="page-register/page-register.js"></script>
 
         <!-- Fontello Icon Font (generiert auf fontello.com) -->
         <link rel="stylesheet" href="fontello/css/fontello.css" />
@@ -37,8 +38,11 @@
                     url: "^/Detail/(.*)$",
                     klass: PageDetail,
                 },{
-                    url: "^/Login/(.*)$",
+                    url: "^/Login(.*)$",
                     klass: PageLogin,
+                },{
+                    url: "^/Registrierung(.*)$",
+                    klass: PageRegister,
                 },{
                     url: ".*",
                     klass: PageNotFound,
@@ -90,15 +94,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#/profile">
+                        <a href="#/Registrierung">
                             Registrieren
                             <span class="small-screen-only">Registrieren</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/cart">
-                            <i class="icon-cart"></i>
-                            <span class="small-screen-only">Warenkorb</span>
                         </a>
                     </li>
                 </ul>
@@ -114,6 +112,7 @@
                     <a href="#">Impressum</a>
             </div>
 
+<<<<<<< HEAD
             </script>
 
             <div class="slideshow-container">
@@ -157,6 +156,8 @@
             <div class="favorites">
                 <p> Dauerbrenner </p>
             </div>
+=======
+>>>>>>> 91eb05e9ec52b048e07b500c07e34d97286e50cd
 
             <div class="content">
 

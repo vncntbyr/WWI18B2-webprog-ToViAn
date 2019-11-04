@@ -1,7 +1,13 @@
 /**
  * Stylesheet zur Klasse PageOverview: Startseite der App
  */
-
+ /*Header*/
+header p {
+     color: white;
+     font-weight: bold;
+     padding: 15px;
+     margin-left: 20px;
+ }
   /* Einzelne Kacheln */
 
 .container {
@@ -25,7 +31,7 @@
   transition: .5s ease;
   opacity: 0;
   text-align:center;
-  
+
 }
 .container a,
 .container a:visited {

@@ -152,6 +152,7 @@ header nav .menu-left li {
     color: rgb(250, 197, 24);
   }
 
+<<<<<<< HEAD
   /* Slideshow container */
   .slideshow-container {
     max-width: auto;
@@ -202,6 +203,8 @@ header nav .menu-left li {
     margin-left: 20px;
 }
 
+=======
+>>>>>>> 91eb05e9ec52b048e07b500c07e34d97286e50cd
 /* Kopfinhalt der Seite */
 
 header .content h1,
@@ -280,9 +283,23 @@ main {
     flex: 1;
 }
 
+<<<<<<< HEAD
 main a,
 main a:visited {
     color: crimson;
     text-decoration: underline;
     transition: color 0.25s;
+=======
+
+
+
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+>>>>>>> 91eb05e9ec52b048e07b500c07e34d97286e50cd
 }
