@@ -23,7 +23,6 @@ html {
     font-size: 14pt;
     line-height: 1.6;
 
-    /* https://pixabay.com/photos/ship-boat-lake-sailing-boat-italy-952292/ */
     background-color: rgb(70, 24, 172);
     background-size: cover;
     background-attachment: fixed;
@@ -137,7 +136,7 @@ header nav .menu-left li {
     overflow: hidden;
     background-color: rgb(36, 16, 90);
   }
-  
+
   .category a {
     float: left;
     color: #f2f2f2;
@@ -147,12 +146,53 @@ header nav .menu-left li {
     font-size: 17px;
     margin-left: 10px;
   }
-  
+
   .category a:hover {
     background-color:rgb(33, 19, 70);
     color: rgb(250, 197, 24);
   }
 
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: auto;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Caption text */
+  .text {
+    color: black;
+    font-size: 15px;
+    font-style: bold;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5.5s;
+    animation-name: fade;
+    animation-duration: 5.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
 /* Qualitätskategorien beschreiben */
 
 .favorites {
@@ -233,7 +273,7 @@ header .content h6 {
 /* HAUPTBEREICH */
 
 
-/* Hintergrund des Hauptbereichs */ 
+/* Hintergrund des Hauptbereichs */
 main {
     padding: var(--content-padding);
     background: rgba(70, 24, 172, 0.9);
@@ -245,15 +285,4 @@ main a:visited {
     color: crimson;
     text-decoration: underline;
     transition: color 0.25s;
-}
-
-
- .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
 }
