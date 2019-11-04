@@ -1,8 +1,9 @@
 /**
  * Stylesheet zur schöneren Gestaltung einfacher Formulare
+ * Nicht von uns, wmgl löschbar!
  */
 
-form > * {
+/**form > * {
     display: block;
     width: 100%;
 
@@ -12,3 +13,4 @@ form > * {
     padding: 0.5em 0 0.5em 0;
     margin-bottom: 1em;
 }
+**/
