@@ -152,48 +152,8 @@ header nav .menu-left li {
     color: rgb(250, 197, 24);
   }
 
-<<<<<<< HEAD
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: auto;
-    position: relative;
-    margin: auto;
-  }
 
-  /* Caption text */
-  .text {
-    color: black;
-    font-size: 15px;
-    font-style: bold;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
 
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 5.5s;
-    animation-name: fade;
-    animation-duration: 5.5s;
-  }
-
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
-  }
 /* Qualitätskategorien beschreiben */
 
 .favorites {
@@ -203,8 +163,7 @@ header nav .menu-left li {
     margin-left: 20px;
 }
 
-=======
->>>>>>> 91eb05e9ec52b048e07b500c07e34d97286e50cd
+
 /* Kopfinhalt der Seite */
 
 header .content h1,
@@ -275,31 +234,9 @@ header .content h6 {
 
 /* HAUPTBEREICH */
 
-
 /* Hintergrund des Hauptbereichs */
 main {
     padding: var(--content-padding);
     background: rgba(70, 24, 172, 0.9);
     flex: 1;
-}
-
-<<<<<<< HEAD
-main a,
-main a:visited {
-    color: crimson;
-    text-decoration: underline;
-    transition: color 0.25s;
-=======
-
-
-
- .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
->>>>>>> 91eb05e9ec52b048e07b500c07e34d97286e50cd
 }
