@@ -10,18 +10,12 @@ class PageLogin {
      */
     constructor(app) {
         this._app = app;
-        this._recordId = -1;
-        this._data = null;
     }
 
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
     async show(matches) {
-        // URL-Parameter auswerten
-        this._recordId = matches[1];
-        this._data = this._app.database.getRecordById(this._recordId);
-
         // Anzuzeigenden Seiteninhalt nachladen
         let html = await fetch("page-login/page-login.html");
         let css = await fetch("page-login/page-login.css");
@@ -35,9 +29,12 @@ class PageLogin {
         }
 
         // Seite zur Anzeige bringen
-        let pageDom = this._processTemplate(html);
 
-        this._app.setPageTitle(`Hardwareverleih ${this._data.name}`, {isSubPage: true});
+        let pageDom = document.createElement("div");
+        pageDom.innerHTML = html;
+        
+
+        this._app.setPageTitle("R&C - Login");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));

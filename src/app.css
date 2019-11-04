@@ -137,7 +137,7 @@ header nav .menu-left li {
     overflow: hidden;
     background-color: rgb(36, 16, 90);
   }
-  
+
   .category a {
     float: left;
     color: #f2f2f2;
@@ -147,20 +147,11 @@ header nav .menu-left li {
     font-size: 17px;
     margin-left: 10px;
   }
-  
+
   .category a:hover {
     background-color:rgb(33, 19, 70);
     color: rgb(250, 197, 24);
   }
-
-/* Qualitätskategorien beschreiben */
-
-.favorites {
-    color: white;
-    font-weight: bold;
-    padding: 15px;
-    margin-left: 20px;
-}
 
 /* Kopfinhalt der Seite */
 
@@ -233,7 +224,7 @@ header .content h6 {
 /* HAUPTBEREICH */
 
 
-/* Hintergrund des Hauptbereichs */ 
+/* Hintergrund des Hauptbereichs */
 main {
     padding: var(--content-padding);
     background: rgba(70, 24, 172, 0.9);
