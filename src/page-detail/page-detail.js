@@ -78,5 +78,4 @@ class PageDetail {
      * Button aufgerufen wird.
      */
 
-  
 }

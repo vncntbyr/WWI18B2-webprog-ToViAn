@@ -1,45 +1,47 @@
 /**
- * Stylesheet zur Klasse PageDetail: Detailseite der App
- */
+* Stylesheet zur Klasse PageDetail: Detailseite der App
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900&subset=latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700,800);
 
 .page-heading > div {
-    order: 1;
-    flex: 1;
+  order: 1;
+  flex: 1;
 }
 .page-heading > img {
-    box-sizing: border-box;
-    width: 6em;
-    max-width: 100%;
+  box-sizing: border-box;
+  width: 6em;
+  max-width: 100%;
 
-    border: 1px solid lightgrey;
-    padding: 0.25em;
-    background: rgb(250, 250, 250);
+  border: 1px solid lightgrey;
+  padding: 0.25em;
+  background: rgb(250, 250, 250);
 
-    order: 2;
+  order: 2;
 }
 
 .boat-info {
-    font-size: 90%;
+  font-size: 90%;
 }
 
 .boat-info .label {
-    color: darkgrey;
-    display: inline-block;
+  color: darkgrey;
+  display: inline-block;
 }
 
 .boat-info .value {
-    display: inline-block;
+  display: inline-block;
 }
 
 @media (min-width: 50em) {
-    .page-heading {
-        display: flex;
-    }
+  .page-heading {
+    display: flex;
+  }
 
-    .boat-info .field {
-        display: inline-block;
-        padding-right: 5em;
-    }
+  .boat-info .field {
+    display: inline-block;
+    padding-right: 5em;
+  }
 }
 
 {
@@ -60,7 +62,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: auto;
-  height: 400px;
+  height: 500px;
   background: #fff;
   margin-top: 20px;
 }
@@ -93,19 +95,19 @@
 
 .container .details h2
 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.5em;
-    line-height: 0.8em;
-    color: #24105a;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
+  line-height: 0.8em;
+  color: #24105a;
 }
 
 .container .details h2 span
 {
-    font-size: 0.55em;
-    letter-spacing: 2px;
-    margin-top: 5px;
-    margin-left: -5px;
+  font-size: 0.55em;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-left: -5px;
 }
 
 
@@ -119,29 +121,29 @@
 
 .container .details h3
 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.5em;
-    color: #24105a;
-    float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
+  color: #24105a;
+  float: left;
 }
 
 .container .details button
 {
-    background: rgb(36, 16, 90);
-    color: #fff;
-    border: none;
-    box-shadow: none;
-    outline: none;
-    padding: 25px 20px;
-    margin-top: 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 40px;
-    cursor: pointer;
-    float: right;
+  background: rgb(36, 16, 90);
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 25px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  float: right;
 }
 @media (max-width: 1080px)
 {
@@ -184,44 +186,44 @@
 /* Sternebewertung */
 
 span#Bewertung {
- line-height: 45px;
+  line-height: 45px;
 }
 
 span.sternebewertung {
- float: left;
+  float: left;
 }
 
 span.sternebewertung:not(:checked) > input {
- display: None;
+  display: None;
 }
 
 span.sternebewertung:not(:checked) > label {
- float: Right;
- width: 1em;
- padding: 0 .1em;
- overflow: Hidden;
- white-space: Nowrap;
- cursor: Pointer;
- font-size: 200%;
- line-height: 1.2;
- color: #D0D0D0;
- text-shadow: 1px 1px #B0B0B0, 2px 2px #606060, .1em .1em .2em rgba(0,0,0,.5);
- transition: all .5s;
+  float: Right;
+  width: 1em;
+  padding: 0 .1em;
+  overflow: Hidden;
+  white-space: Nowrap;
+  cursor: Pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #D0D0D0;
+  text-shadow: 1px 1px #B0B0B0, 2px 2px #606060, .1em .1em .2em rgba(0,0,0,.5);
+  transition: all .5s;
 }
 
 span.sternebewertung:not(:checked) > label:before {
- content: '★ ';
+  content: '★ ';
 }
 
 span.sternebewertung > input:checked ~ label {
- color: #FFD700;
- text-shadow: 1px 1px #C06000, 2px 2px #904000, .1em .1em .2em rgba(0,0,0,.5);
+  color: #FFD700;
+  text-shadow: 1px 1px #C06000, 2px 2px #904000, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 span.sternebewertung:not(:checked) > label:hover,
 span.sternebewertung:not(:checked) > label:hover ~ label {
- color: #FFD700;
- text-shadow: 1px 1px #F29E02, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+  color: #FFD700;
+  text-shadow: 1px 1px #F29E02, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 span.sternebewertung > input:checked + label:hover,
@@ -229,8 +231,8 @@ span.sternebewertung > input:checked + label:hover ~ label,
 span.sternebewertung > input:checked ~ label:hover,
 span.sternebewertung > input:checked ~ label:hover ~ label,
 span.sternebewertung > label:hover ~ input:checked ~ label {
- color: #F9B500;
- text-shadow: 1px 1px #F8BA01, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+  color: #F9B500;
+  text-shadow: 1px 1px #F8BA01, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
 
 .containerZ
@@ -240,7 +242,7 @@ span.sternebewertung > label:hover ~ input:checked ~ label {
   flex-wrap: wrap;
   justify-content: space-between;
   width: auto;
-  height: 250px;
+  height: 600px;
   background:rgb(36, 16, 90);
   margin-top: 10px;
 }
@@ -269,23 +271,21 @@ span.sternebewertung > label:hover ~ input:checked ~ label {
 
 .containerZ .details h2
 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5em;
-    line-height: 0.8em;
-    color: rgb(36, 16, 90);
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  line-height: 0.8em;
+  color: rgb(36, 16, 90);
 }
 
 
 .containerZ .details table
 {
-    font-size: 0.55em;
-    letter-spacing: 2px;
-    margin-top: 20px;
-    color: rgb(36, 16, 90);
+  font-size: 0.55em;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: rgb(36, 16, 90);
 }
-
-
 
 @media (max-width: 1080px)
 {
@@ -331,10 +331,14 @@ span.sternebewertung > label:hover ~ input:checked ~ label {
   color: #fff;
 }
 
-.containerZ .wArtikel img
+.content
 {
-  position: relative;
-  width: 200px;
-  height: 150px;
-  position: center;
+  margin-top: 3em;
+
+}
+
+.content img
+{
+  max-width: 200px;
+  max-height: 200px;
 }
