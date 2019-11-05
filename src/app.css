@@ -1,166 +1,166 @@
 /**
- * Stylesheet zur Klasse App: Hauptstylesheet der Anwendung.
- *
- * Hier sollten nur allgemeine Sachen stehen, die das Layout als Ganzes
- * betreffen. Also solche Dinge wie Schriftart und Größe, Farben sowie das
- * Layout im Allgemeinen betreffend.
- */
+* Stylesheet zur Klasse App: Hauptstylesheet der Anwendung.
+*
+* Hier sollten nur allgemeine Sachen stehen, die das Layout als Ganzes
+* betreffen. Also solche Dinge wie Schriftart und Größe, Farben sowie das
+* Layout im Allgemeinen betreffend.
+*/
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
 /*
- * ALLGEMEINES
- */
+* ALLGEMEINES
+*/
 html, body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 
-    min-height: 100%;
-    height: 100%;
+  min-height: 100%;
+  height: 100%;
 }
 
 html {
-    font-family: "Rubik", sans-serif;
-    font-size: 14pt;
-    line-height: 1.6;
+  font-family: "Rubik", sans-serif;
+  font-size: 14pt;
+  line-height: 1.6;
 
-    background-color: rgb(70, 24, 172);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+  background-color: rgb(70, 24, 172);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 
-    --content-padding: 1rem;
+  --content-padding: 1rem;
 }
 
 @media (min-width: 40em) {
-    html {
-        font-size: 15pt;
-    }
+  html {
+    font-size: 15pt;
+  }
 }
 
 @media (min-width: 60em) {
-    html {
-        font-size: 16pt;
-    }
+  html {
+    font-size: 16pt;
+  }
 }
 
 @media (min-width: 80em) {
-    html {
-        font-size: 18pt;
-    }
+  html {
+    font-size: 18pt;
+  }
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 
 /*
- * KOPFBEREICH
- */
+* KOPFBEREICH
+*/
 
 /* Allgemeine Darstellung der Menüzeile */
 header {
-    --text-color: white;
-    --icon-color: white;
+  --text-color: white;
+  --icon-color: white;
 }
 header nav {
-    padding: var(--content-padding);
-    color: var(--text-color);
+  padding: var(--content-padding);
+  color: var(--text-color);
 }
 
 header nav i {
-    color: var(--icon-color);
+  color: var(--icon-color);
 }
 
 header nav .page-name {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 header nav .logo {
-    display: none;
+  display: none;
 }
 
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 header nav li {
-    padding: 0.25em 0 0.25em 0;
+  padding: 0.25em 0 0.25em 0;
 }
 
 /* Link-Farben */
 header nav a,
 header nav a:visited {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.25s;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.25s;
 }
 
 header nav a:hover {
-    color: var(--icon-color);
+  color: var(--icon-color);
 }
 
 header nav a i,
 header nav a:visited i {
-    color: var(--icon-color);
+  color: var(--icon-color);
 }
 
 header nav a:hover i {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 /* Linkes Menü */
 header nav .menu-left {
-    display: flex;
+  display: flex;
 }
 
 header nav .menu-left .go-back,
 header nav .menu-left .dont-go-back {
-    flex: 1;
+  flex: 1;
 }
 
 header nav .menu-left li {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Navi-Leiste */
 
 .category {
-    overflow: hidden;
-    background-color: rgb(36, 16, 90);
-  }
+  overflow: hidden;
+  background-color: rgb(36, 16, 90);
+}
 
-  .category a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    margin-left: 10px;
-  }
+.category a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 10px;
+}
 
-  .category a:hover {
-    background-color:rgb(33, 19, 70);
-    color: rgb(250, 197, 24);
-  }
+.category a:hover {
+  background-color:rgb(33, 19, 70);
+  color: rgb(250, 197, 24);
+}
 
 
 
 /* Qualitätskategorien beschreiben */
 
 .favorites {
-    color: white;
-    font-weight: bold;
-    padding: 15px;
-    margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  margin-left: 20px;
 }
 
 
@@ -172,76 +172,76 @@ header .content h3,
 header .content h4,
 header .content h5,
 header .content h6 {
-    margin: 0;
+  margin: 0;
 }
 
 header .content h2 {
-    font-size: 110%;
+  font-size: 110%;
 }
 
 header .content h3,
 header .content h4,
 header .content h5,
 header .content h6 {
-    font-size: 110%;
+  font-size: 110%;
 }
 
 /* Bearbeitung der Search-Bar */
 
-    .topnav input[type=text] {
-        float: right;
-        padding: 6px;
-        margin-top: 1px;
-        margin-right: 16px;
-        font-size: 15px;
-        outline-width: 0; /* Blaues highlighten bei Input entfernen */
-        border: 2px solid rgb(36, 16, 90);
-        border-radius: 20px;
-        box-shadow: 0 0 0 1px rgb(36, 16, 90);
-    }
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 1px;
+  margin-right: 16px;
+  font-size: 15px;
+  outline-width: 0; /* Blaues highlighten bei Input entfernen */
+  border: 2px solid rgb(36, 16, 90);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px rgb(36, 16, 90);
+}
 
 /* Anpassung an große Bildschirme */
 @media (max-width: 40em) {
-    .small-screen-hidden {
-        display: none;
-    }
-    .category {
-        display: none;
-    }
+  .small-screen-hidden {
+    display: none;
+  }
+  .category {
+    display: none;
+  }
 }
 
 @media (min-width: 40em) {
-    .small-screen-only {
-        display: none !important;
-    }
+  .small-screen-only {
+    display: none !important;
+  }
 
-    .logo {
-        display: inline-block !important;
-        height: 2em;
-        padding-right: var(--content-padding);
-    }
+  .logo {
+    display: inline-block !important;
+    height: 2em;
+    padding-right: var(--content-padding);
+  }
 
-    header nav,
-    header nav .menu-right {
-        display: flex;
-    }
+  header nav,
+  header nav .menu-right {
+    display: flex;
+  }
 
-    header nav .menu-right li {
-        padding-left: var(--content-padding);
-    }
+  header nav .menu-right li {
+    padding-left: var(--content-padding);
+  }
 
-    header nav .menu-left {
-        flex: 1;
-    }
+  header nav .menu-left {
+    flex: 1;
+  }
 }
 
 /* HAUPTBEREICH */
 
 /* Hintergrund des Hauptbereichs */
 main {
-    padding: var(--content-padding);
-    background: rgba(70, 24, 172, 0.9);
-    flex: 1;
+  padding: var(--content-padding);
+  background: rgba(70, 24, 172, 0.9);
+  flex: 1;
 }
 
 .highlighter {
@@ -259,15 +259,11 @@ main {
 
 .footer-background {
   width: 100%;
-  height: 10em;
+  height: 20em;
   background-color: white;
   border-top-left-radius: 60px 30px;
   border-top-right-radius: 60px 30px;
 }
-
-.footer-content {
-}
-
 
 .part1 {
   max-width: 49%;
@@ -282,10 +278,35 @@ main {
 }
 
 @media (max-width: 1080px) { /* Wenn man drunter fällt */
-    .part1 {
-        max-width: 98%;
-    }
-    .part2 {
-        max-width: 98%;
-    }
+  .part1 {
+    max-width: 98%;
+  }
+  .part2 {
+    max-width: 98%;
+  }
+}
+
+hr {
+  color: rgb(36, 16, 90);
+  size: 40px;
+}
+
+.footer-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  font-size: 0.8em;
+  text-align: left;
+  padding: 8px;
+}
+
+td a:hover {
+  color: rgb(250, 211, 24);
+}
+
+th {
+  text-align: left;
+  padding: 8px;
 }

@@ -1,147 +1,165 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Rent & Collect</title>
+<head>
+  <meta charset="utf-8" />
+  <title>Rent & Collect</title>
+  <link rel="shortcut icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
-        <!-- Verlinkt Favicon für jedes Betriebssystem + Browser -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#603cba">
-        <meta name="theme-color" content="#ffffff">
+  <!-- Klasse App: Steuert die gesamte Anwendung -->
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="app.css" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
+  <script src="database.js"></script>
 
-        <!-- Klasse App: Steuert die gesamte Anwendung -->
-        <script src="app.js"></script>
-        <link rel="stylesheet" href="app.css" />
+  <!-- Klassen für die einzelnen App-Seiten -->
+  <script src="page-overview/page-overview.js"></script>
+  <script src="page-detail/page-detail.js"></script>
+  <script src="page-not-found/page-not-found.js"></script>
+  <script src="page-login/page-login.js"></script>
+  <script src="page-register/page-register.js"></script>
 
-        <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
-        <script src="database.js"></script>
+  <!-- Fontello Icon Font (generiert auf fontello.com) -->
+  <link rel="stylesheet" href="fontello/css/fontello.css" />
 
-        <!-- Klassen für die einzelnen App-Seiten -->
-        <script src="page-overview/page-overview.js"></script>
-        <script src="page-detail/page-detail.js"></script>
-        <script src="page-not-found/page-not-found.js"></script>
-        <script src="page-login/page-login.js"></script>
-        <script src="page-register/page-register.js"></script>
+  <!-- Stylesheets zur Gestaltung einzelner HTML-Elemente -->
+  <link rel="stylesheet" href="elements/button.css" />
+  <link rel="stylesheet" href="elements/tab-buttons.css" />
+  <link rel="stylesheet" href="elements/form.css" />
 
-        <!-- Fontello Icon Font (generiert auf fontello.com) -->
-        <link rel="stylesheet" href="fontello/css/fontello.css" />
+  <!-- Anwendung starten -->
+  <script>
+  window.addEventListener("load", () => {
+    let pages = [{
+      url: "^/$",
+      klass: PageOverview,
+    },{
+      url: "^/Detail/(.*)$",
+      klass: PageDetail,
+    },{
+      url: "^/Login(.*)$",
+      klass: PageLogin,
+    },{
+      url: "^/Registrierung(.*)$",
+      klass: PageRegister,
+    },{
+      url: ".*",
+      klass: PageNotFound,
+    }];
 
-        <!-- Stylesheets zur Gestaltung einzelner HTML-Elemente -->
-        <link rel="stylesheet" href="elements/button.css" />
-        <link rel="stylesheet" href="elements/tab-buttons.css" />
-        <link rel="stylesheet" href="elements/form.css" />
+    let app = new App("Hardwareverleih", pages);
+    app.run();
+  });
+  </script>
 
-        <!-- Anwendung starten -->
-        <script>
-            window.addEventListener("load", () => {
-                let pages = [{
-                    url: "^/$",
-                    klass: PageOverview,
-                },{
-                    url: "^/Detail/(.*)$",
-                    klass: PageDetail,
-                },{
-                    url: "^/Login(.*)$",
-                    klass: PageLogin,
-                },{
-                    url: "^/Registrierung(.*)$",
-                    klass: PageRegister,
-                },{
-                    url: ".*",
-                    klass: PageNotFound,
-                }];
+  <!-- Dummy-Element für dynamisch nachgeladene CSS-Regeln -->
+  <style id="page-css"></style>
+</head>
+<body>
+  <!-- Kopfbereich der App -->
+  <header>
+    <nav>
+      <!-- Logo, Zurück-Button und Titel der Seite -->
+      <a href="#">
+        <img class="logo" src="logo.png" alt="Logo" />
+      </a>
 
-                let app = new App("Hardwareverleih", pages);
-                app.run();
-            });
-        </script>
+      <ul class="menu-left">
+        <li class="go-back">
+          <a href="#">
+            <i class="icon-left-open"></i>
+            <span class="page-name">Name der Seite</span>
+          </a>
+        </li>
+        <li class="dont-go-back hidden">
+          <span class="page-name">Name der Seite</span>
+        </li>
+        <li class="topnav">
+          <input type="text" placeholder="Wonach suchen Sie?...">
+        </li>
+        <li class="toggle-menu small-screen-only">
+          <a href="#">
+            <i class="icon-menu"></i>
+          </a>
+        </li>
+      </ul>
 
-        <!-- Dummy-Element für dynamisch nachgeladene CSS-Regeln -->
-        <style id="page-css"></style>
-    </head>
-    <body>
-        <!-- Kopfbereich der App -->
-        <header>
-            <nav>
-                <!-- Logo, Zurück-Button und Titel der Seite -->
-                <a href="#">
-                    <img class="logo" src="logo.png" alt="Logo" />
-                </a>
+      <!-- Übergreifendes App-Menü -->
+      <ul class="menu-right small-screen-hidden">
+        <li>
+          <a href="#/Login">
+            Login
+            <span class="small-screen-only">Login</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/Registrierung">
+            Registrieren
+            <span class="small-screen-only">Registrieren</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-                <ul class="menu-left">
-                    <li class="go-back">
-                        <a href="#">
-                            <i class="icon-left-open"></i>
-                            <span class="page-name">Name der Seite</span>
-                        </a>
-                    </li>
-                    <li class="dont-go-back hidden">
-                        <span class="page-name">Name der Seite</span>
-                    </li>
-                    <li class="topnav">
-                        <input type="text" placeholder="Wonach suchen Sie?...">
-                    </li>
-                    <li class="toggle-menu small-screen-only">
-                        <a href="#">
-                            <i class="icon-menu"></i>
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Übergreifendes App-Menü -->
-                <ul class="menu-right small-screen-hidden">
-                    <li>
-                        <a href="#/Login">
-                            Login
-                            <span class="small-screen-only">Login</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/Registrierung">
-                            Registrieren
-                            <span class="small-screen-only">Registrieren</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="category">
-                    <a class="active" href="#">Laptops</a>
-                    <a href="#">PC-Setups</a>
-                    <a href="#">Monitore</a>
-                    <a href="#">Beamer</a>
-                    <a href="#">Lieferbestimmungen</a>
-                    <a href="#">Über uns</a>
-                    <a href="#">Impressum</a>
-            </div>
-
-            <div class="content">
-            </div>
-
-        </header>
-
-        <!-- Hauptbereich mit dem Inhalt der einzelnen Seiten -->
-        <main id="app-main-area">
-        </main>
-
-        <div class="highlighter">
-          <p>Nur heute <b> kostenlosen Versand </b> ab 40€ Einkaufswert!</p>
-        </div>
-
-    </body>
-
-    <footer>
-    <div class="footer-background">
-      <div class="footer-content">
-        <img class="part1" src="/images/part1.png"/>
-        <img class="part2" src="/images/part2.png"/>
-      </div>
+    <div class="category">
+      <a class="active" href="#">Laptops</a>
+      <a href="#">PC-Setups</a>
+      <a href="#">Monitore</a>
+      <a href="#">Beamer</a>
+      <a href="#">Lieferbestimmungen</a>
+      <a href="#">Über uns</a>
+      <a href="#">Impressum</a>
     </div>
+
+    <div class="content">
+    </div>
+
+  </header>
+
+  <!-- Hauptbereich mit dem Inhalt der einzelnen Seiten -->
+  <main id="app-main-area">
+  </main>
+
+  <div class="highlighter">
+    <p> Nur heute <b> kostenlosen Versand </b> ab 40€ Einkaufswert! </p>
+  </div>
+
+</body>
+
+<footer>
+  <div class="footer-background"> <!-- Hintergrundfläche des Footers -->
+    <div class="footer-content"> <!-- Platz für Inhalte des Footers -->
+      <img class="part1" src="/images/part1.png"/> <!-- Erster Teil der Bezahlmöglichkeiten -->
+      <img class="part2" src="/images/part2.png"/> <!-- Zweiter Teil der Bezahlmöglichkeiten -->
+
+      <hr style="border: 0.5em rgb(36, 16, 90);">
+
+      <div class="footer-table">
+        <table width=100%>
+          <tr>
+            <th>Über R&C</th>
+            <th>Angebote</th>
+            <th>Hilfe</th>
+          </tr>
+          <tr>
+            <td> <a style="text-decoration:none" href="">Über uns</td>
+            <td> <a style="text-decoration:none" href="">Top-Produkte</td>
+            <td> <a style="text-decoration:none" href="">So funktioniert's</td>
+          </tr>
+          <tr>
+            <td> <a style="text-decoration:none" href="">Kontaktieren Sie uns</td>
+            <td> <a style="text-decoration:none" href="">Deals</td>
+            <td> <a style="text-decoration:none" href="">FAQ</td>
+          </tr>
+          <tr>
+            <td> <a style="text-decoration:none" href="">Jobs</td>
+            <td> <a style="text-decoration:none" href="">Geschäftskunden</td>
+            <td> <a style="text-decoration:none" href="">Support-Ticket erstellen</td>
+          </tr>
+        </table>
+
+        </div>
+      </div>
     </footer>
-</html>
+    </html>
