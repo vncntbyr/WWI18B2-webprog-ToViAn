@@ -1,21 +1,29 @@
 <header>
 </header>
 <main>
-    <div id="login-field">
-        <form class="box" action="page-login.html" method="post">
+    <div class="login-field">
+        <form class="box" action="/#" method="post">
             <h1>Login</h1>
             <input type="text" name="" placeholder="Username" />
             <input type="password" name="" placeholder="Password" />
-            <br />
             <input type="submit" name="" value="Login" />
-
+            <br />
             <a href="#/Registrierung">Noch keinen Account?</a>
             <br />
-            <a>Passwort vergessen?</a>
-            <br />
-
-
+            <a id="reset">
+                Passwort vergessen?
+            </a>
         </form>
 
+    </div>
+    <!--  Modal -->
+    <div id="pwreset" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="box2" action="/#" method="post">
+        <p>Passwort zurücksetzen</p>    
+        </form>
+      </div>
     </div>
 </main>

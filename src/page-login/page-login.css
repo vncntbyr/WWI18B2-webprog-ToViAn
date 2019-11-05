@@ -1,20 +1,23 @@
+main{
 
+}
 .login-field{
     font-size: 28px;
 }
+
 .box {
     display:block;
-    width: 50em;
-    :50em;
-    padding: 40px;
+    width: 40em;
+    padding: 0px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #191919;
+    background: rgb(36, 16, 90);
     text-align: center;
 }
 .box h1 {
+    display: block;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
@@ -25,18 +28,17 @@
     display: block;
     margin: 30px auto;
     text-align: center;
-    border: 2px solid #E38609;
+    border: 3px solid 	#EF850B;
     padding: 19px 32px;
     width: 20em;
     outline: none;
     color: white;
     border-radius: 24px; /* macht rund */
     transition: 0.25s;
-    placeholde
 }
 .box input[type= "text"]:focus, .box input[type = "password"]:focus {
     width: 30em;
-    border-color: #00B29F;
+    border-color: #00B19D;
 }
 .box input[type= "submit"] {
     border: 0;
@@ -45,7 +47,7 @@
     margin: 20px auto;
     font-size:1em;
     text-align: center;
-    border: 2px solid #00B29F;
+    border: 3px solid #CD2A5F;
     padding: 14px 40px;
     width: 200px;
     outline: none;
@@ -55,7 +57,7 @@
     cursor: pointer;
 }
 .box input[type= "submit"]:hover {
-    background: #00B29F;
+    background: #CD2A5F;
 }
 /* Placeholder Größe */
 /*Chrome/Opera/Safari*/
@@ -77,5 +79,58 @@
 main a{
     color: white;
     text-decoration: none;
-    text
+    cursor: pointer;
+}
+/*Box anpassen für kleinere Geräte, dass es die Head Zeile nicht überlappt*/
+/*Ebenso Anpassung der Dateneingabe, damit es den Bildschirm nicht überschreitet --> keine Verlängerung sondern nur Farbänderung der Border*/
+/*Auch Anpassung der Schriftgröße*/
+@media (max-width: 40em) {
+    .box {
+        background: rgb(36, 16, 90)
+    }
+    .box input[type= "text"], .box input[type = "password"] {
+        border: 2px solid 	#EF850B
+    }
+    .box input[type= "text"]:focus, .box input[type = "password"]:focus {
+        width:20em;
+    }
+}
+
+
+/* The Modal (background) */
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 300%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

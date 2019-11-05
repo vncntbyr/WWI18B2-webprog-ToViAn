@@ -40,5 +40,5 @@ class PageRegister {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
-
-    }
+    
+}

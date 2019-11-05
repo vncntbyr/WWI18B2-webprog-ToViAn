@@ -32,13 +32,22 @@ class PageLogin {
 
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
-        
+
+
+        pageDom.querySelector("#reset").addEventListener("click", () => this.openmodal());
+        pageDom.getElementsByClassName("close")[0].addEventListener("click", () => this.closemodal());
+
 
         this._app.setPageTitle("R&C - Login");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
-    }
-
 
     }
+    openmodal() {
+        document.querySelector("#pwreset").style.display = "block";
+    }
+    closemodal() {
+        document.querySelector("#pwreset").style.display = "none";
+    }
+}
