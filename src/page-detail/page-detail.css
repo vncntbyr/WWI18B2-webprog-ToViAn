@@ -235,7 +235,6 @@ span.zeitraumAuswahl > input:checked ~ label {
   width: auto;
   height: 450px;
   background:rgb(36, 16, 90);
-  margin-top: 10px;
 }
 .containerZ .imgBX
 {
