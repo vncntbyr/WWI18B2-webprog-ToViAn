@@ -5,42 +5,60 @@
 <main>
   <div class="container">
 
-        <div class="imgBX">
-          <img src="{IMG}" alt="" />
+    <div class="imgBX">
+      <img src="{IMG}" alt="" />
+    </div>
+
+    <div class="details">
+      <div class="content">
+        <h2>{NAME}<br><span>
+
+          <span class="sternebewertung">
+            <input type="radio" id="stern5" name="bewertung" value="5"><label for="stern5" title="5 Sterne">5 Sterne</label>
+            <input type="radio" id="stern4" name="bewertung" value="4"><label for="stern4" title="4 Sterne">4 Sterne</label>
+            <input type="radio" id="stern3" name="bewertung" value="3"><label for="stern3" title="3 Sterne">3 Sterne</label>
+            <input type="radio" id="stern2" name="bewertung" value="2"><label for="stern2" title="2 Sterne">2 Sterne</label>
+            <input type="radio" id="stern1" name="bewertung" value="1"><label for="stern1" title="1 Stern">1 Stern</label>
+
+          </span></h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+          <h4>Mindestmietdauer wählen:</h4>
+
+
+
+          <span class="zeitraumAuswahl">
+
+            <input type="radio" id="monat12" name="zeitraum" value="12"><label for="monat12" title="12 Monate">12</label>
+            <input type="radio" id="monat6" name="zeitraum" value="6"><label for="monat6" title="6 Monate">6</label>
+            <input type="radio" id="monat3" name="zeitraum" value="3"><label for="monat3" title="3 Monate">3</label>
+            <input type="radio" id="monat1" name="zeitraum" value="1"><label for="monat1" title="1 Monat">1</label>
+
+          </span>
+          <br><br>
+
+
+
+          <h3>{PREIS} {CURRENCY}</h3>
+          <button>Jetzt leihen</button>
         </div>
+      </div>
+    </div>
+
+
+
+    <div class="containerZ">
+
+      <div class="imgBX">
 
         <div class="details">
-            <div class="content">
-              <h2>{NAME}<br><span>
+          <div class="content">
 
-                <span class="sternebewertung">
-                 <input type="radio" id="stern5" name="bewertung" value="5"><label for="stern5" title="5 Sterne">5 Sterne</label>
-                 <input type="radio" id="stern4" name="bewertung" value="4"><label for="stern4" title="4 Sterne">4 Sterne</label>
-                 <input type="radio" id="stern3" name="bewertung" value="3"><label for="stern3" title="3 Sterne">3 Sterne</label>
-                 <input type="radio" id="stern2" name="bewertung" value="2"><label for="stern2" title="2 Sterne">2 Sterne</label>
-                 <input type="radio" id="stern1" name="bewertung" value="1"><label for="stern1" title="1 Stern">1 Stern</label>
+            <h2>Technische Details</h2>
 
-             </span></h2>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <h3>{PREIS} {CURRENCY}</h3>
-              <button>Jetzt leihen</button>
-            </div>
-        </div>
-  </div>
-
-
-
-  <div class="containerZ">
-
-        <div class="imgBX">
-
-          <div class="details">
-              <div class="content">
-
-          <h2>Technische Details</h2>
-
-          <table style="height: 163px;" width="557">
+            <table style="height: 163px;" width="557">
               <tbody>
                 <tr>
                   <td style="width: auto;">Akku</td>
@@ -61,80 +79,76 @@
               </tbody>
             </table>
 
+          </div>
         </div>
-            </div>
-        </div>
-
-
-        <div class="wArtikel">
-
-        <h2>Weitere Artikel</h2>
-        <div class="main"><!-- Defining submain content section -->
-          <section class="content"><!-- Defining the content section #2 -->
-              <div class="right">
-
-                  <table>
-                  <tbody>
-                  <tr>
-
-                  <td style="width: 116px;">
-                    <div class="img"><a href="#"><img alt="" src="images/Kamera.png"></a></div>
-                  <div class="info">
-                      <a class="title" href="#">Product 1</a>
-                      <div class="price">
-                          <span class="usual">$600.00 </span>&nbsp;
-                          <span class="special">$500.00</span>
-                      </div>
-                  </div></td>
-
-                  <td style="width: 116.667px;">
-                    <div class="img"><a href="#"><img alt="" src="images/Maus.png"></a></div>
-                  <div class="info">
-                      <a class="title" href="#">Product 2</a>
-                      <div class="price">
-                          <span class="usual">$500.00 </span>&nbsp;
-                          <span class="special">$400.00</span>
-                      </div>
-                  </div>
-                </td>
-
-                  </tr>
-                  <tr>
-                  <td style="width: 116px;">
-                    <div class="img"><a href="#"><img alt="" src="images/Monitor.png"></a></div>
-                        <div class="info">
-                            <a class="title" href="#">Product 3</a>
-                            <div class="price">
-                                <span class="usual">$700.00 </span>&nbsp;
-                                <span class="special">$600.25</span>
-                            </div>
-                        </div>
-                        </td>
-
-                  <td style="width: 116.667px;">
-                    <div class="img"><a href="#"><img alt="" src="images/Smartphone.png"></a></div>
-                  <div class="info">
-                      <a class="title" href="#">Product 4</a>
-                      <div class="price">
-                          <span class="usual">$805.00 </span>&nbsp;
-                          <span class="special">$714.25</span>
-                      </div>
-                  </div>
-                </td>
-
-                  </tr>
-                  </tbody>
-                  </table>
-
-
-
-          </section>
       </div>
 
-          </div>
+
+      <div class="wArtikel">
+        <div class="content">
+
+
+
+        <h2>Weitere Artikel</h2>
+
+
+              <table>
+                <tbody>
+                  <tr>
+
+                    <td>
+                      <div class="img"><a href="#"><img alt="" src="images/Kamera.png"></a></div>
+                      <div class="info">
+                        <h4 class="title" href="#">Kamera</h4>
+                        <div class="price">
+                          <span>$500.00</span>
+                        </div>
+                      </div></td>
+
+                      <td>
+                        <div class="img"><a href="#"><img alt="" src="images/Maus.png"></a></div>
+                        <div class="info">
+                          <h4 class="title" href="#">Maus</h4>
+                          <div class="price">
+                            <span>$400.00</span>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="img"><a href="#"><img alt="" src="images/Monitor.png"></a></div>
+                        <div class="info">
+                          <h4 class="title" href="#">Monitor</h4>
+                          <div class="price">
+                            <span>$600.25</span>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <div class="img"><a href="#"><img alt="" src="images/Tastatur.png"></a></div>
+                        <div class="info">
+                          <h4 class="title" href="#">Tastatur</h4>
+                          <div class="price">
+                            <span>$714.25</span>
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
   </div>
 
+          </div>
 
 
 
-</main>
+
+
+
+    </main>
