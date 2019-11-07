@@ -86,6 +86,12 @@
   color: rgb(36, 16, 90);
 }
 
+.container .details img
+{
+  width: 8em;
+  margin-bottom: 0.5em;
+}
+
 .container .details button
 {
   background: rgb(36, 16, 90);
@@ -196,7 +202,6 @@ span.sternebewertung > label:hover ~ input:checked ~ label {
 span.zeitraumAuswahl {
   float: left;
   margin-top: 10px;
-
 }
 
 span.zeitraumAuswahl:not(:checked) > input {
@@ -275,6 +280,7 @@ span.zeitraumAuswahl > input:checked ~ label {
   color: rgb(36, 16, 90);
 }
 
+
 @media (max-width: 1080px)
 {
   .containerZ
@@ -314,13 +320,20 @@ span.zeitraumAuswahl > input:checked ~ label {
   color: #fff;
 }
 
+.wArtikel table{
+  border-collapse: collapse;
+}
 
 .wArtikel td
 {
-
-border: 3px solid #fff;
 width: 30em;
+border: 2px solid #fff;
+}
 
+
+.wArtikel td:hover
+{
+opacity: 0.3;
 }
 
 
@@ -353,6 +366,7 @@ width: 30em;
   border-radius: 75px;
   overflow: hidden;
   margin-top: 1em;
+  margin-bottom: 1em;
   background: linear-gradient(  100deg,  #9fcef9 0%, #24105a 100%  );
   color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

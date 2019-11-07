@@ -58,6 +58,7 @@ class PageDetail {
         html = html.replace(/{PREIS}/g, this._data.preis);
         html = html.replace(/{CURRENCY}/g, this._data.currency);
         html = html.replace(/{STATUS}/g, this._data.status);
+        html = html.replace(/{VERFÜGBAR}/g, this._data.verfügbar);
 
 
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
