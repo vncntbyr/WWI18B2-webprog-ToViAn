@@ -1,49 +1,70 @@
 /**
- * Stylesheet zur Klasse PageOverview: Startseite der App
- */
- /*Header*/
+* Stylesheet zur Klasse PageOverview: Startseite der App
+*/
+/*Header*/
 header p {
-     color: white;
-     font-weight: bold;
-     padding: 15px;
-     margin-left: 20px;
- }
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  margin-left: 20px;
+}
 
-  /* Einzelne Kacheln */
+/* Einzelne Kacheln */
 
 .container {
-    display: inline-block;
-    background: rgba(36, 16, 90);
-    margin: 0.5em;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 40px;
+  margin: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid rgb(70, 24, 172);
+}
+
+.container:hover {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 40px;
+  margin: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid rgb(245, 166, 35);
+
 }
 
 .container img {
-    width: 18.5em;
-    height: 10em;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
-
-    transition: .5s ease;
+  width: 18.5em;
+  height: 10em;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: .5s ease;
   backface-visibility: hidden;
 }
 
-.container .middle {
+.container button {
   transition: .5s ease;
   opacity: 0;
   text-align:center;
-
+  transform: translate(-20%,-300%);
+  top:50%;
+  left:50%;
+  z-index:1;
 }
+
 .container a,
 .container a:visited {
-    /*Hiermit greift man auf die Farbe unter den Bildern zu!*/
-    color: white;
-    text-decoration: none;
+  /*Hiermit greift man auf die Farbe unter den Bildern zu!*/
+  color: black;
+  font-style: bold;
+  text-decoration: none;
 }
-.container:hover a,
-.container:hover img{
-    opacity: 0.3;
+
+.container:hover img,
+.container:hover span{
+  opacity: 0.3;
 }
-.container:hover .middle{
-    opacity: 1;
+.container:hover button{
+  opacity: 1;
+  opacity-color: rgb(245, 166, 35);
 }

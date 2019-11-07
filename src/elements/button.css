@@ -4,16 +4,15 @@
 
 button {
     font-size: 90%;
-
-    border: 0;
     padding: 1em;
-
+    border-radius: 20px;
+    border-style: none;
     color: white;
-    background-color: rgb(76, 153, 177);
+    background-color: rgb(245, 166, 35);
     transition: background-color 0.25s;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: rgb(28, 88, 150);
+    background-color: rgb(239, 153, 11);
 }
