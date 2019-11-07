@@ -2,47 +2,33 @@
  * Allgemeine Angaben
  */
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
-
-html {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 12pt;
-}
 .wrapper{
     text-align:center;
+}
+h1 {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 /*
  * Basis-Layout des Formulars
  */
 form {
     max-width: 30em;
-
-    border: 1px solid #d0d0d0;
-    background: #f0f0f0;
+    width: 50%;
+    border: 1px solid rgb(36, 16, 90);
+    background: rgb(36, 16, 90);
     padding: 1em;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
+    color: white;
 }
 
 form > *,
-form > .side-by-side > * {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-form > .side-by-side {
-    display: flex;
-}
-
-form > .side-by-side > * {
-    margin-right: 0.25em;
-}
-
-form > .side-by-side > *:last-child {
-    margin-right: 0;
-}
 
 /*
  * Gestaltung der Feldbezeichner
@@ -63,29 +49,58 @@ form label .required {
 /*
  * Gestaltung der Formularfelder
  */
-input{
-    border: 1px solid #bebebe;
-    padding: 0.5em;
-    margin: 0;
+.box input[type= "text"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 3px solid 	#EF850B;
+    padding: 19px 32px;
+    width: 20em;
     outline: none;
+    color: white;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
 }
 
 /*
  * Der Button zum Abschicken des Formulars
  */
-input[type="submit"] {
-    margin-top: 2em;
-    width: auto;
-
-    background-color: #0958A7;
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    font-size:1em;
+    text-align: center;
+    border: 3px solid #CD2A5F;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
     color: white;
-    font-weight: bold;
-
-    transition: background-color 0.2s;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #CD2A5F;
+}
+.box input[type= "email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 3px solid 	#EF850B;
+    padding: 19px 32px;
+    width: 20em;
+    outline: none;
+    color: white;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
 }
 
-input[type="submit"]:hover {
-    background-color: #2868A8;
 }
 
 /*
@@ -98,4 +113,22 @@ input[type="submit"]:hover {
 
 #result.okay {
     color: darkgreen;
+}
+
+/* Placeholder Größe */
+/*Chrome/Opera/Safari*/
+.box input[type= "text"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder, .box input[type="email"]::-webkit-input-placeholder {
+    font-size:2em;
+}
+/*Mozilla Firefox 19+*/
+.box input[type= "text"]::-moz-placeholder, .box input[type = "password"]::-moz-placeholder, .box input[type="email"]::-moz-placeholder {
+    font-size:2em;
+}
+/*Internet Explorer*/
+.box input[type= "text"]:-ms-input-placeholder, .box input[type = "password"]:-ms-input-placeholder, .box input[type="email"]::-ms-input-placeholder {
+    font-size:2em;
+}
+/*Mozilla Firefox 18-*/
+.box input[type= "text"]:-moz-placeholder, .box input[type = "password"]:-moz-placeholder, .box input[type="email"]::-moz-placeholder {
+    font-size:2em;
 }
