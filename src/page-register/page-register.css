@@ -1,15 +1,16 @@
 /*
  * Allgemeine Angaben
  */
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
 .wrapper{
     text-align:center;
+    font-size: 28px
 }
-h1 {
+.box h1 {
     display: block;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+    margin: 0;
 }
 /*
  * Basis-Layout des Formulars
@@ -18,32 +19,13 @@ form {
     max-width: 30em;
     width: 50%;
     border: 1px solid rgb(36, 16, 90);
-    background: rgb(36, 16, 90);
+    background: rgb(36, 16, 91);
     padding: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -20%);
     color: white;
-}
-
-form > *,
-
-
-/*
- * Gestaltung der Feldbezeichner
- */
-form label {
-    font-weight: bold;
-    margin-top: 1em;
-}
-
-form label:first-child {
-    margin-top: 0;
-}
-
-form label .required {
-    color: darkred;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 0em;
 }
 
 /*
@@ -64,28 +46,6 @@ form label .required {
     transition: 0.25s;
 }
 
-/*
- * Der Button zum Abschicken des Formulars
- */
-.box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    font-size:1em;
-    text-align: center;
-    border: 3px solid #CD2A5F;
-    padding: 14px 40px;
-    width: 200px;
-    outline: none;
-    color: white;
-    border-radius: 24px; /* macht rund */
-    transition: 0.25s;
-    cursor: pointer;
-}
-input[type="submit"]:hover {
-    background: #CD2A5F;
-}
 .box input[type= "email"]{
     border: 0;
     background: none;
@@ -100,21 +60,36 @@ input[type="submit"]:hover {
     border-radius: 24px; /* macht rund */
     transition: 0.25s;
 }
-
-}
-
 /*
- * Element mit dem Prüfergebnis
+ * Der Button zum Abschicken des Formulars
  */
-#result {
-    margin-top: 1em;
-    color: red;
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    font-size:1em;
+    text-align: center;
+    border: 3px solid #CD2A5F;
+    padding: 14px 30px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
+    cursor: pointer;
 }
-
-#result.okay {
-    color: darkgreen;
+/*
+*Effekte bei Hovern/Klick auf den Button
+*/
+input[type="submit"]:hover {
+    background: #CD2A5F;
 }
+.box input[type= "text"]:focus, .box input[type = "email"]:focus {
+    width: 30em;
+    border-color: #00B19D;
 
+}
 /* Placeholder Größe */
 /*Chrome/Opera/Safari*/
 .box input[type= "text"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder, .box input[type="email"]::-webkit-input-placeholder {
