@@ -58,6 +58,7 @@ class PageDetail {
         html = html.replace(/{PREIS}/g, this._data.preis);
         html = html.replace(/{CURRENCY}/g, this._data.currency);
         html = html.replace(/{STATUS}/g, this._data.status);
+        html = html.replace(/{VERFÜGBAR}/g, this._data.verfügbar);
 
 
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
@@ -73,9 +74,13 @@ class PageDetail {
         return pageDom;
     }
 
+
+
     /**
      * Beispiel für einen einfachen Event Handler, der bei Klick auf einen
      * Button aufgerufen wird.
      */
-
+     _onShowMoreButtonClicked() {
+             alert(this._data.name);
+         }
 }

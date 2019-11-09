@@ -23,6 +23,7 @@ class Database {
                 currency:   "Euro",
                 status:     "available",
                 size:       "medium",
+                verfügbar:  "images/verfügbar.png",
             },{
                 id:          2,
                 img:        "images/Laptop.png",
@@ -31,6 +32,7 @@ class Database {
                 currency:   "Euro",
                 status:     "available",
                 size:       "medium",
+                verfügbar:  "images/verfügbar.png",
             },{
                 id:          3,
                 img:        "images/Maus.png",
@@ -39,6 +41,7 @@ class Database {
                 currency:   "Euro",
                 status:     "available",
                 size:       "medium",
+                verfügbar:  "images/verfügbar.png",
             },{
                 id:          4,
                 img:        "images/Monitor.png",
@@ -47,6 +50,7 @@ class Database {
                 currency:   "Euro",
                 status:     "available",
                 size:       "medium",
+                verfügbar:  "images/verfügbar.png",
             },{
                 id:          5,
                 img:        "images/Smartphone.png",
@@ -55,6 +59,7 @@ class Database {
                 currency:   "Euro",
                 status:     "available",
                 size:       "medium",
+                verfügbar:  "images/verfügbar.png",
             },{
                 id:          6,
                 img:        "images/Tastatur.png",
@@ -63,6 +68,7 @@ class Database {
                 currency:   "Euro",
                 status:     "available",
                 size:       "medium",
+                verfügbar:  "images/verfügbar.png",
             },
         ];
     }
