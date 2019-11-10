@@ -46,6 +46,10 @@ class App {
         document.querySelector("header nav .toggle-menu a").addEventListener("click", this._toggleHamburgerMenu);
         document.querySelector("header nav .go-back a").addEventListener("click", () => window.history.back());
 
+            //Event Listener für Modal bei Hovern des Accounts
+        document.querySelector("header nav .loggedin .test").addEventListener("mouseover", () => this.modalon());
+        document.querySelector("header nav .loggedin .test").addEventListener("mouseout", () => this.modaloff());
+
         // Single Page Router starten und die erste Seite aufrufen
         window.addEventListener("hashchange", () => this._handleRouting());
         this._handleRouting();
@@ -74,6 +78,13 @@ class App {
         if (event) {
             event.preventDefault();
         }
+    }
+
+    modalon(){
+        document.querySelector("#information").style.display = "block";
+    }
+    modaloff(){
+        document.querySelector("#information").style.display = "none";
     }
 
     /**

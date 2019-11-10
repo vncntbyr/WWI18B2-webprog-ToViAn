@@ -129,6 +129,34 @@ header nav .menu-left .dont-go-back {
 header nav .menu-left li {
   display: inline-block;
 }
+/****************/
+/* Rechtes Menü */
+/****************/
+header nav .loggedin {
+    display:none;
+}
+header nav .loggedin .information{
+    display:none;
+    z-index:1;
+    position:fixed;
+    color:black;
+    background-color:white;
+    border-radius:40px;
+    width:8%;
+    height:auto;
+    text-align:center;
+}
+header nav .loggedin .information ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav .loggedin .information li {
+  padding: 0.25em 0 0.25em 0;
+}
+
+
+
 
 /* Navi-Leiste */
 

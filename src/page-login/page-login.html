@@ -2,11 +2,15 @@
 </header>
 <main>
     <div class="login-field">
-        <form id="login" class="box" action="/#" method="post">
+
+        <form id="login" class="box">
             <h1>Login</h1>
-            <input type="email" name="" placeholder="email@example.com" />
-            <input type="password" name="" placeholder="Password" />
-            <input type="submit" name="" value="Login" />
+            <div id="hidden">
+                Der Login war erfolgreich!
+            </div>
+            <input id="email" type="email" name="" placeholder="email@example.com" />
+            <input id="password" type="password" name="" placeholder="Password" />
+            <input id="submit" type="submit" name="" value="Login" />
             <br />
             <a href="#/Registrierung">Noch keinen Account?</a>
             <br />

@@ -1,8 +1,0 @@
-{
-    id:          2,
-    img:        "xxx",
-    name:       "Smartphone",
-    preis:      "299.99",
-    waehrung:   "Euro",
-    status:     "available"
-}
