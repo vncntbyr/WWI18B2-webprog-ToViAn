@@ -1,8 +1,6 @@
 <header>
 </header>
 <main>
-    <div class="wrapper">
-
            <form
                 class   = "box"
                onsubmit = "validateForm(event)"
@@ -27,9 +25,14 @@
                </label>
                <input name="email" type="email" placeholder="email@example.com" />
 
+               <!-- Passwort -->
+               <label for="password">
+                  Passwort:
+                   <span class="required">*</span>
+               </label>
+               <input name="password" type="password" placeholder="Password" />
 
                <!-- Button zum Abschicken des Formulars -->
                <input type="submit" value="Abschicken"/>
            </form>
-        </div>
 </main>
