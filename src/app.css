@@ -215,11 +215,15 @@ header .content h6 {
 }
 
 /* Bearbeitung der Search-Bar */
+.topnav {
+  width: 50%;
+}
 
 .topnav input[type=text] {
-  float: right;
+  float: left;
+  width: 90%;
   padding: 6px;
-  margin-top: 1px;
+  margin-top: 10px;
   margin-right: 16px;
   font-size: 15px;
   outline-width: 0; /* Blaues highlighten bei Input entfernen */
@@ -233,31 +237,34 @@ header .content h6 {
   .small-screen-hidden {
     display: none;
   }
+
+  .category {
+      display: none;
+    }
 }
 
 @media (min-width: 40em) {
   .small-screen-only {
     display: none !important;
+  }
+
+.logo {
+  display: inline-block !important;
+  height: 2em;
+  padding-right: var(--content-padding);
 }
 
-  .logo {
-    display: inline-block !important;
-    height: 2em;
-    padding-right: var(--content-padding);
-  }
+header nav,
+header nav .menu-right {
+  display: flex;
+}
 
-  header nav,
-  header nav .menu-right {
-    display: flex;
-  }
+header nav .menu-right li {
+  padding-left: var(--content-padding);
+}
 
-  header nav .menu-right li {
-    padding-left: var(--content-padding);
-  }
-
-  header nav .menu-left {
-    flex: 1;
-  }
+header nav .menu-left {
+  flex: 1;
 }
 
 /* HAUPTBEREICH */
@@ -267,6 +274,7 @@ main {
   padding: var(--content-padding);
   background: rgba(70, 24, 172, 0.9);
   flex: 1;
+}
 }
 
 .highlighter {
