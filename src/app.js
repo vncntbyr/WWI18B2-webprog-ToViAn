@@ -48,8 +48,8 @@ class App {
         document.querySelector("header nav .go-back a").addEventListener("click", () => window.history.back());
 
             //Event Listener für Modal bei Hovern des Accounts
-        document.querySelector("header nav .loggedin .test").addEventListener("mouseover", () => this.modalon());
-        document.querySelector("header nav .loggedin .test").addEventListener("mouseout", () => this.modaloff());
+        document.querySelector("header nav .loggedin").addEventListener("mouseover", () => this.modalon());
+        document.querySelector("header nav .loggedin").addEventListener("mouseout", () => this.modaloff());
 
             //Event Listener für die Kategorien Navigator Leiste
             ////////////////////////////////////////////////////
