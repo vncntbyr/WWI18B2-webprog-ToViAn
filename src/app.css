@@ -132,6 +132,9 @@ header nav .menu-left li {
 /****************/
 /* Rechtes Menü */
 /****************/
+header nav .loggedin .test{
+    transform: translate(-30%, 10%);
+}
 header nav .loggedin {
     display:none;
 }
@@ -142,9 +145,10 @@ header nav .loggedin .information{
     color:black;
     background-color:white;
     border-radius:40px;
-    width:8%;
-    height:auto;
+    width:10%;
+    height:auto ;
     text-align:center;
+    transform: translate(-30%, 10%);
 }
 header nav .loggedin .information ul{
     list-style: none;
