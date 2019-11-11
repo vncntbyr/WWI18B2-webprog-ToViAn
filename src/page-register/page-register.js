@@ -20,6 +20,7 @@ class PageRegister {
         let html = await fetch("page-register/page-register.html");
         let css = await fetch("page-register/page-register.css");
 
+
         if (html.ok && css.ok) {
             html = await html.text();
             css = await css.text();
@@ -33,6 +34,7 @@ class PageRegister {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
 
+        pageDom.querySelector("#submit").addEventListener("submit", (e) => this.stopsubmit(e));
 
         this._app.setPageTitle("Passwort zurücksetzen");
         this._app.setPageCss(css);
@@ -40,5 +42,10 @@ class PageRegister {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
-    
+    stopsubmit(e){
+        //Nachladen verhindern bzw Submit Button hat jetzt keine Funktion (wegen des Umfangs)
+        e.preventDefault();
+    }
+
+
 }

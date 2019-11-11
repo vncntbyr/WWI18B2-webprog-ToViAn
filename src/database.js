@@ -33,6 +33,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
+                category:   10,
             },{
                 id:          3,
                 img:        "images/Maus.png",
@@ -42,6 +43,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
+                category:   "equimpent",
             },{
                 id:          4,
                 img:        "images/Monitor.png",
@@ -69,6 +71,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
+                category:   "equimpent",
             },
         ];
     }
@@ -92,4 +95,11 @@ class Database {
     getAllRecords() {
         return this._data;
     }
+
+    /*Funktion einfügen, welche heißt getRecordByCategory{} Soll nach Category Datensätze holen*/
+    getRecordByCategory(category){
+        category = parseInt(category);
+        return this._data.find(r => r.category === category);
+    }
+
 }

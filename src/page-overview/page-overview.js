@@ -61,5 +61,5 @@ class PageOverview {
             mainElement.innerHTML += html;
         });
     }
-    
+
 }

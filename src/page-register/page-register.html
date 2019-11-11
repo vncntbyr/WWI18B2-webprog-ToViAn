@@ -1,38 +1,36 @@
 <header>
 </header>
 <main>
-           <form
-                class   = "box"
-               onsubmit = "validateForm(event)"
-               action   = "contact-form.php"
-               method   = "POST"
-           >
-           <h1>Registrierung</h1>
-               <!-- Vorname und Nachname -->
-               <label for="firstname">
-                   Ihr Name:
-                   <span class="required">*</span>
-               </label>
-               <div class="side-by-side">
-                   <input name="firstname" type="text" placeholder="Vorname" />
-                   <input name="lastname" type="text" placeholder="Nachname" />
-               </div>
+    
+    <form id="registrierung "class   = "box">
 
-               <!-- E-Mailadresse -->
-               <label for="email">
-                   E-Mail:
-                   <span class="required">*</span>
-               </label>
-               <input name="email" type="email" placeholder="email@example.com" />
+        <h1>Registrierung</h1>
 
-               <!-- Passwort -->
-               <label for="password">
-                  Passwort:
-                   <span class="required">*</span>
-               </label>
-               <input name="password" type="password" placeholder="Password" />
+        <!-- Vor- und Nachname -->
+        <label for="firstname">
+            Ihr Name:
+            <span class="required">*</span>
+        </label>
+        <div class="side-by-side">
+            <input name="firstname" type="text" placeholder="Vorname" />
+            <input name="lastname" type="text" placeholder="Nachname" />
+        </div>
 
-               <!-- Button zum Abschicken des Formulars -->
-               <input type="submit" value="Abschicken"/>
-           </form>
+        <!-- Emailadresse -->
+        <label for="email">
+            E-Mail:
+            <span class="required">*</span>
+        </label>
+        <input name="email" type="email" placeholder="email@example.com" />
+
+        <!-- Passwort -->
+        <label for="password">
+            Passwort:
+            <span class="required">*</span>
+        </label>
+        <input name="password" type="password" placeholder="Password" />
+
+        <!-- Submit Button -->
+        <input id="submit" type="submit" value="Abschicken"/>
+    </form>
 </main>

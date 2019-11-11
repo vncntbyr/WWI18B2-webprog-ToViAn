@@ -32,6 +32,7 @@ class App {
         this._pages = pages;
         this._currentPageObject = null;
 
+
         // Datenbank-Objekt zum Lesen und Speichern von Daten
         this.database = new Database();
     }
@@ -49,6 +50,10 @@ class App {
             //Event Listener für Modal bei Hovern des Accounts
         document.querySelector("header nav .loggedin .test").addEventListener("mouseover", () => this.modalon());
         document.querySelector("header nav .loggedin .test").addEventListener("mouseout", () => this.modaloff());
+
+            //Event Listener für die Kategorien Navigator Leiste
+            ////////////////////////////////////////////////////
+        document.querySelector("header .category #laptop").addEventListener("click", () => this.loadLaptops());
 
         // Single Page Router starten und die erste Seite aufrufen
         window.addEventListener("hashchange", () => this._handleRouting());
@@ -79,13 +84,33 @@ class App {
             event.preventDefault();
         }
     }
-
+    //Modal, welches bei Hovern des Accounts erscheint
     modalon(){
         document.querySelector("#information").style.display = "block";
     }
     modaloff(){
         document.querySelector("#information").style.display = "none";
     }
+
+    //Diese Funktion blendet nur gewollte Produkte nach Kategorien ein
+    //////////////////////////////////////////////////////////////////
+    loadLaptops(){
+        let mainElement = document.querySelector("main");
+        let templateElement = document.querySelector("#template-tile");
+
+        this.database.getRecordByCategory(10).forEach(hardware =>{
+
+            let html = templateElement.innerHTML;
+
+            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
+            html = html.replace("{IMG}", hardware.img);
+            html = html.replace("{NAME}", hardware.name);
+            html = html.replace("{PREIS}", hardware.preis);
+
+            mainElement.innerHTML += html;
+        });
+    }
+    ////////////////////////////////////////////////////////////////
 
     /**
      * Diese Methode wertet die aktuelle URL aus und sorgt dafür, dass die
