@@ -1,4 +1,21 @@
-iframe
+.map
 {
-  position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map iframe
+{
+  width: 50em;
+  height: 25em;
+}
+
+@media (max-width: 1080px)
+{
+  .map iframe
+  {
+    width: 30em;
+    height: 30em;
+  }
 }
