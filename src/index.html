@@ -27,6 +27,7 @@
   <script src="page-not-found/page-not-found.js"></script>
   <script src="page-login/page-login.js"></script>
   <script src="page-register/page-register.js"></script>
+  <script src="page-map/page-map.js"></script>
 
   <!-- Fontello Icon Font (generiert auf fontello.com) -->
   <link rel="stylesheet" href="fontello/css/fontello.css" />
@@ -51,6 +52,9 @@
     },{
       url: "^/Registrierung(.*)$",
       klass: PageRegister,
+    },{
+      url: "^/Karte(.*)$",
+      klass: PageMap,
     },{
       url: ".*",
       klass: PageNotFound,
@@ -143,6 +147,7 @@
       <a href="#">Monitore</a>
       <a href="#">Kameras</a>
       <a href="#">Zubehör</a>
+      <a href="#/Karte">Karte</a>
     </div>
 
     <div class="content">
