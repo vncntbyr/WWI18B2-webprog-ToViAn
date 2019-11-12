@@ -158,7 +158,9 @@ header nav .loggedin .information ul{
 header nav .loggedin .information li {
   padding: 0.25em 0 0.25em 0;
 }
-
+header nav .loggedin .information a{
+    color: black;
+}
 
 
 
