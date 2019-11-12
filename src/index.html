@@ -28,10 +28,11 @@
   <script src="page-login/page-login.js"></script>
   <script src="page-register/page-register.js"></script>
   <script src="page-map/page-map.js"></script>
+  <script src="page-payment/page-payment.js"></script>
 
   <!-- Fontello Icon Font (generiert auf fontello.com) -->
   <link rel="stylesheet" href="fontello/css/fontello.css" />
-
+  
   <!-- Stylesheets zur Gestaltung einzelner HTML-Elemente -->
   <link rel="stylesheet" href="elements/button.css" />
   <link rel="stylesheet" href="elements/tab-buttons.css" />
@@ -55,6 +56,9 @@
     },{
       url: "^/Karte(.*)$",
       klass: PageMap,
+    },{
+      url: "^/Zahlvorgang(.*)$",
+      klass: PagePayment,
     },{
       url: ".*",
       klass: PageNotFound,
@@ -130,7 +134,7 @@
                               <a href="/#/Karte">Standorte</a>
                           </li>
                           <li>
-                              <a href="/#/Detail/1">Kamera</a>
+                              <a href="/#/Zahlvorgang">Checkout</a>
                           </li>
                           <li>
                               <a href="/#/Detail/2">Laptop</a>
