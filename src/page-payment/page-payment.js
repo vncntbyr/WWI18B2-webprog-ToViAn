@@ -35,7 +35,7 @@ class PagePayment {
         pageDom.innerHTML = html;
 
 
-        pageDom.querySelector("#next").addEventListener("click", () => this.    switchpage());
+        pageDom.querySelector("#next").addEventListener("click", () => this.switchpage());
 
         this._app.setPageTitle("R&C - Zahlvorgang");
         this._app.setPageCss(css);
@@ -45,5 +45,14 @@ class PagePayment {
 
     switchpage(){
         alert("Hilfe");
+        let stepElements = document.querySelectorAll(".pagination .step");
+        stepElements.forEach(e => e.classList.remove("active"));
+
+
+
+        let currentStep = 1;
+
+        let currentStepElement = document.querySelector(`.pagination .step[data-step-number="${currentStep}"]`);
+        if (currentStepElement) currentStepElement.classList.add("active")
     }
 }

@@ -34,6 +34,13 @@ class PageOverview {
 
         this._renderBoatTiles(pageDom);
 
+        document.querySelector("header .category #laptop").addEventListener("click", () => this.loadLaptops(pageDom));
+        document.querySelector("header .category #sets").addEventListener("click", () => this.loadsets(pageDom));
+        document.querySelector("header .category #monitore").addEventListener("click", () => this.loadmonitore(pageDom));
+        document.querySelector("header .category #kameras").addEventListener("click", () => this.loadkamera(pageDom));
+        document.querySelector("header .category #accessories").addEventListener("click", () => this.loadaccessories(pageDom));
+
+
         this._app.setPageTitle("Rent & Collect");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
@@ -60,6 +67,91 @@ class PageOverview {
 
             mainElement.innerHTML += html;
         });
+    }
+
+    loadLaptops(pageDom){
+
+        let mainElement = pageDom.querySelector("main");
+        let templateElement = pageDom.querySelector("#template-tile");
+
+
+        this._app.database.getRecordByCategory(10).forEach(hardware => {
+            let html = templateElement.innerHTML;
+            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
+            html = html.replace("{IMG}", hardware.img);
+            html = html.replace("{NAME}", hardware.name);
+            html = html.replace("{PREIS}", hardware.preis);
+            mainElement.innerHTML += html;
+        });
+        this._app.setPageContent(pageDom.querySelector("main"));
+    }
+    
+    loadsets(pageDom){
+
+        let mainElement = pageDom.querySelector("main");
+        let templateElement = pageDom.querySelector("#template-tile");
+
+
+        this._app.database.getRecordByCategory(20).forEach(hardware => {
+            let html = templateElement.innerHTML;
+            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
+            html = html.replace("{IMG}", hardware.img);
+            html = html.replace("{NAME}", hardware.name);
+            html = html.replace("{PREIS}", hardware.preis);
+            mainElement.innerHTML += html;
+        });
+        this._app.setPageContent(pageDom.querySelector("main"));
+    }
+
+    loadmonitore(pageDom){
+
+        let mainElement = pageDom.querySelector("main");
+        let templateElement = pageDom.querySelector("#template-tile");
+
+
+        this._app.database.getRecordByCategory(30).forEach(hardware => {
+            let html = templateElement.innerHTML;
+            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
+            html = html.replace("{IMG}", hardware.img);
+            html = html.replace("{NAME}", hardware.name);
+            html = html.replace("{PREIS}", hardware.preis);
+            mainElement.innerHTML += html;
+        });
+        this._app.setPageContent(pageDom.querySelector("main"));
+    }
+
+    loadkamera(pageDom){
+
+        let mainElement = pageDom.querySelector("main");
+        let templateElement = pageDom.querySelector("#template-tile");
+
+
+        this._app.database.getRecordByCategory(40).forEach(hardware => {
+            let html = templateElement.innerHTML;
+            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
+            html = html.replace("{IMG}", hardware.img);
+            html = html.replace("{NAME}", hardware.name);
+            html = html.replace("{PREIS}", hardware.preis);
+            mainElement.innerHTML += html;
+        });
+        this._app.setPageContent(pageDom.querySelector("main"));
+    }
+
+    loadaccessories(pageDom){
+
+        let mainElement = pageDom.querySelector("main");
+        let templateElement = pageDom.querySelector("#template-tile");
+
+
+        this._app.database.getRecordByCategory(50).forEach(hardware => {
+            let html = templateElement.innerHTML;
+            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
+            html = html.replace("{IMG}", hardware.img);
+            html = html.replace("{NAME}", hardware.name);
+            html = html.replace("{PREIS}", hardware.preis);
+            mainElement.innerHTML += html;
+        });
+        this._app.setPageContent(pageDom.querySelector("main"));
     }
 
 }

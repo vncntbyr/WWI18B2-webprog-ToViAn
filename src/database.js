@@ -9,6 +9,14 @@
  * der Daten fehlen komplett, könnten aber in einer echten Anwendung relativ
  * einfach hinzugefügt werden.
  */
+ /*
+ Kategorien:
+ Laptops = 10
+ sets = 20
+ monitore = 30
+ kamera = 40
+ accessories = 50
+ */
 class Database {
     /**
      * Konstruktor.
@@ -24,6 +32,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
+                category:   40,
             },{
                 id:          2,
                 img:        "images/Laptop.png",
@@ -43,7 +52,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
-                category:   "equimpent",
+                category:   50,
             },{
                 id:          4,
                 img:        "images/Monitor.png",
@@ -53,6 +62,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
+                category:   30,
             },{
                 id:          5,
                 img:        "images/Smartphone.png",
@@ -62,6 +72,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
+                category:   20,
             },{
                 id:          6,
                 img:        "images/Tastatur.png",
@@ -71,7 +82,7 @@ class Database {
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
-                category:   "equimpent",
+                category:   50,
             },
         ];
     }
@@ -99,7 +110,7 @@ class Database {
     /*Funktion einfügen, welche heißt getRecordByCategory{} Soll nach Category Datensätze holen*/
     getRecordByCategory(category){
         category = parseInt(category);
-        return this._data.find(r => r.category === category);
+        return this._data.filter(r => r.category === category);
     }
 
 }

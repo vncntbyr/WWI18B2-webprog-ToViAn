@@ -29,42 +29,55 @@
     cursor:default;
 }
 
-
-.pagination .first{
+/*Macht Ecken des erstes und des letzten Schritt rund*/
+.pagination .step-first{
     padding-left:10px;
     border-radius: 30px 0 0 30px;
-    background-color: rgb(36, 16, 90);
+    background: rgb(70, 24, 172);
 }
-.pagination .step{
-    padding-left:25px;
-}
-.pagination .last{
+.pagination .step-last{
     padding-left:15px;
     padding-right: 10px;
     border-radius: 0 30px 30px 0;
 }
 
-
+/*Zentriert Text*/
+.pagination .step{
+    padding-left:25px;
+}
+/*Setzt eine unsichtbare Border, damit die Leiste etwas Abstand nach oben und unten hat*/
 .pagination a::before, .pagination a::after{
     content:"";
     position:absolute;
     border-top:30px solid transparent;
     border-bottom: 30px solid transparent;
 }
-.step::before, .last::before{
+
+/*Setzt weißen Pfeil vor den einzelnen Steps, damit die einzelnen Teile Abstände dazwischen haben und nicht aneinanderkleben*/
+.step::before, .step-last::before{
     border-left: 20px solid white;
     left:0%;
 }
 
-
-
-.first::after{
-    border-left: 20px solid rgb(36, 16, 90);
+/*Platziert die dunklen Pfeilköpfe hinter den einzelnen Kästchen*/
+.step-first::after{
+    border-left: 20px solid rgb(70, 24, 172);
     z-index:4;
     left:100%;
 }
 .step::after{
     border-left: 20px solid rgb(70, 24, 172);
+    z-index:4;
+    left:100%;
+}
+
+/*Ändert Farbe des aktiven Knopfs*/
+.pagination .active{
+    background-color: rgb(36, 16, 90);
+}
+/*erzeugt dunkleren Pfeilkopf hinter dem aktiven Kästchen*/
+.active::after{
+    border-left: 20px solid rgb(36, 16, 90);
     z-index:4;
     left:100%;
 }
