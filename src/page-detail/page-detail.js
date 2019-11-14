@@ -12,6 +12,7 @@ class PageDetail {
         this._app = app;
         this._recordId = -1;
         this._data = null;
+
     }
 
     /**
@@ -41,6 +42,8 @@ class PageDetail {
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
+
+
     }
 
      /**
@@ -55,10 +58,11 @@ class PageDetail {
         // Platzhalter mit den eingelesenen Daten ersetzen
         html = html.replace(/{IMG}/g, this._data.img);
         html = html.replace(/{NAME}/g, this._data.name);
-        html = html.replace(/{PREIS}/g, this._data.preis);
+        html = html.replace(/{PREIS}/g, this._data.preis1);
         html = html.replace(/{CURRENCY}/g, this._data.currency);
         html = html.replace(/{STATUS}/g, this._data.status);
         html = html.replace(/{VERFÜGBAR}/g, this._data.verfügbar);
+
 
 
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
@@ -70,17 +74,17 @@ class PageDetail {
         pageDom.querySelectorAll(".id").forEach(e => e.textContent = this._recordId);
         //pageDom.querySelector("#show-more-button").addEventListener("click", () => this._onShowMoreButtonClicked());
 
+        pageDom.querySelector("#einMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis1, this._data.currency));
+        pageDom.querySelector("#dreiMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis3, this._data.currency));
+        pageDom.querySelector("#sechsMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis6, this._data.currency));
+        pageDom.querySelector("#zwölfMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis12, this._data.currency));
+
+
         // Fertig bearbeitetes HTML-Element zurückgeben
         return pageDom;
     }
 
-
-
-    /**
-     * Beispiel für einen einfachen Event Handler, der bei Klick auf einen
-     * Button aufgerufen wird.
-     */
-     _onShowMoreButtonClicked() {
-             alert(this._data.name);
-         }
+    _PreisWechsel(preisNeu, währung) {
+      document.getElementById("preis").innerHTML = preisNeu + " "+ währung;
+        }
 }
