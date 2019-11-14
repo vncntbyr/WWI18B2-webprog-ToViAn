@@ -34,7 +34,7 @@ class PageMap {
     pageDom.innerHTML = html;
 
 
-            this._app.setPageTitle("R&C - Login");
+            this._app.setPageTitle("R&C -Standorte");
             this._app.setPageCss(css);
             this._app.setPageHeader(pageDom.querySelector("header"));
             this._app.setPageContent(pageDom.querySelector("main"));

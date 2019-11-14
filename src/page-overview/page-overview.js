@@ -40,6 +40,7 @@ class PageOverview {
         document.querySelector("header .category #kameras").addEventListener("click", () => this.loadkamera(pageDom));
         document.querySelector("header .category #accessories").addEventListener("click", () => this.loadaccessories(pageDom));
 
+        document.querySelector("header nav #logo .logo").addEventListener("click", () => this._renderBoatTiles(pageDom));
 
         this._app.setPageTitle("Rent & Collect");
         this._app.setPageCss(css);
@@ -85,7 +86,7 @@ class PageOverview {
         });
         this._app.setPageContent(pageDom.querySelector("main"));
     }
-    
+
     loadsets(pageDom){
 
         let mainElement = pageDom.querySelector("main");
@@ -153,5 +154,4 @@ class PageOverview {
         });
         this._app.setPageContent(pageDom.querySelector("main"));
     }
-
 }

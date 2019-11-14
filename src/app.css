@@ -101,6 +101,7 @@ header nav a:visited {
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.25s;
+  cursor:pointer;
 }
 
 header nav a:hover {
@@ -179,6 +180,7 @@ header nav .loggedin .information a{
   text-decoration: none;
   font-size: 17px;
   margin-left: 10px;
+  cursor:pointer;
 }
 
 .category a:hover {
