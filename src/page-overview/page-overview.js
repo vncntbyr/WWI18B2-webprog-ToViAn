@@ -34,13 +34,13 @@ class PageOverview {
 
         this._renderBoatTiles(pageDom);
 
-        document.querySelector("header .category #laptop").addEventListener("click", () => this.loadLaptops(pageDom));
-        document.querySelector("header .category #sets").addEventListener("click", () => this.loadsets(pageDom));
-        document.querySelector("header .category #monitore").addEventListener("click", () => this.loadmonitore(pageDom));
-        document.querySelector("header .category #kameras").addEventListener("click", () => this.loadkamera(pageDom));
-        document.querySelector("header .category #accessories").addEventListener("click", () => this.loadaccessories(pageDom));
+        document.querySelector("header .category #laptop").addEventListener("click", () => this.reload(pageDom, 10));
+        document.querySelector("header .category #sets").addEventListener("click", () => this.reload(pageDom, 20));
+        document.querySelector("header .category #monitore").addEventListener("click", () => this.reload(pageDom, 30));
+        document.querySelector("header .category #kameras").addEventListener("click", () => this.reload(pageDom, 40));
+        document.querySelector("header .category #accessories").addEventListener("click", () => this.reload(pageDom, 50));
 
-        document.querySelector("header nav #logo .logo").addEventListener("click", () => this._renderBoatTiles(pageDom));
+        document.querySelector("header nav #logo").addEventListener("click", () => this.reloadall(pageDom));
 
         this._app.setPageTitle("Rent & Collect");
         this._app.setPageCss(css);
@@ -70,13 +70,13 @@ class PageOverview {
         });
     }
 
-    loadLaptops(pageDom){
+    reload(pageDom, n){
 
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
 
 
-        this._app.database.getRecordByCategory(10).forEach(hardware => {
+        this._app.database.getRecordByCategory(n).forEach(hardware => {
             let html = templateElement.innerHTML;
             html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
             html = html.replace("{IMG}", hardware.img);
@@ -87,71 +87,20 @@ class PageOverview {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
-    loadsets(pageDom){
-
+    reloadall(pageDom) {
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
 
-
-        this._app.database.getRecordByCategory(20).forEach(hardware => {
+        this._app.database.getAllRecords().forEach(hardware => {
             let html = templateElement.innerHTML;
             html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
             html = html.replace("{IMG}", hardware.img);
             html = html.replace("{NAME}", hardware.name);
             html = html.replace("{PREIS}", hardware.preis);
+
             mainElement.innerHTML += html;
         });
         this._app.setPageContent(pageDom.querySelector("main"));
-    }
 
-    loadmonitore(pageDom){
-
-        let mainElement = pageDom.querySelector("main");
-        let templateElement = pageDom.querySelector("#template-tile");
-
-
-        this._app.database.getRecordByCategory(30).forEach(hardware => {
-            let html = templateElement.innerHTML;
-            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
-            html = html.replace("{IMG}", hardware.img);
-            html = html.replace("{NAME}", hardware.name);
-            html = html.replace("{PREIS}", hardware.preis);
-            mainElement.innerHTML += html;
-        });
-        this._app.setPageContent(pageDom.querySelector("main"));
-    }
-
-    loadkamera(pageDom){
-
-        let mainElement = pageDom.querySelector("main");
-        let templateElement = pageDom.querySelector("#template-tile");
-
-
-        this._app.database.getRecordByCategory(40).forEach(hardware => {
-            let html = templateElement.innerHTML;
-            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
-            html = html.replace("{IMG}", hardware.img);
-            html = html.replace("{NAME}", hardware.name);
-            html = html.replace("{PREIS}", hardware.preis);
-            mainElement.innerHTML += html;
-        });
-        this._app.setPageContent(pageDom.querySelector("main"));
-    }
-
-    loadaccessories(pageDom){
-
-        let mainElement = pageDom.querySelector("main");
-        let templateElement = pageDom.querySelector("#template-tile");
-
-
-        this._app.database.getRecordByCategory(50).forEach(hardware => {
-            let html = templateElement.innerHTML;
-            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
-            html = html.replace("{IMG}", hardware.img);
-            html = html.replace("{NAME}", hardware.name);
-            html = html.replace("{PREIS}", hardware.preis);
-            mainElement.innerHTML += html;
-        });
-        this._app.setPageContent(pageDom.querySelector("main"));
     }
 }
