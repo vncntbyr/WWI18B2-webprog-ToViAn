@@ -82,7 +82,9 @@ header nav .page-name {
 }
 
 header nav .logo {
-  display: none;
+  height: 2em;
+  float: left;
+  margin-right: 1em;
 }
 
 header nav ul {
@@ -134,36 +136,34 @@ header nav .menu-left li {
 /* Rechtes Menü */
 /****************/
 header nav .loggedin .test{
-    transform: translate(-30%, 10%);
+  transform: translate(-30%, 10%);
 }
 header nav .loggedin {
-    display:none;
+  display:none;
 }
 header nav .loggedin .information{
-    display:none;
-    z-index:1;
-    position:fixed;
-    color:black;
-    background-color:white;
-    border-radius:40px;
-    width:10%;
-    height:auto ;
-    text-align:center;
-    transform: translate(-30%, 10%);
+  display:none;
+  z-index:1;
+  position:fixed;
+  color:black;
+  background-color:white;
+  border-radius:40px;
+  width:10%;
+  height:auto ;
+  text-align:center;
+  transform: translate(-30%, 10%);
 }
 header nav .loggedin .information ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 header nav .loggedin .information li {
   padding: 0.25em 0 0.25em 0;
 }
 header nav .loggedin .information a{
-    color: black;
+  color: black;
 }
-
-
 
 /* Navi-Leiste */
 
@@ -246,48 +246,64 @@ header .content h6 {
 }
 
 /* Anpassung an große Bildschirme */
-@media (max-width: 40em) {
+@media (max-width: 1080px) {
   .small-screen-hidden {
     display: none;
   }
+  #map {
+    float: none;
+  }
 
+  .topnav{
+    width:105%;
+    margin-bottom: 3em;
+  }
   .category {
-      display: none;
-    }
+    display: none;
+  }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 1080px) {
   .small-screen-only {
     display: none !important;
   }
 
-.logo {
-  display: inline-block !important;
-  height: 2em;
-  padding-right: var(--content-padding);
-}
+  .distancelog {
+    display: none;
+  }
 
-header nav,
-header nav .menu-right {
-  display: flex;
-}
+  .hide {
+    margin-top: 10em;
+    display: none;
+  }
 
-header nav .menu-right li {
-  padding-left: var(--content-padding);
-}
+  .logo {
+    display: inline-block !important;
+    height: 2em;
+    padding-right: var(--content-padding);
+  }
 
-header nav .menu-left {
-  flex: 1;
-}
+  header nav,
+  header nav .menu-right {
+    display: flex;
+  }
 
-/* HAUPTBEREICH */
+  header nav .menu-right li {
+    padding-left: var(--content-padding);
+  }
 
-/* Hintergrund des Hauptbereichs */
-main {
-  padding: var(--content-padding);
-  background: rgba(70, 24, 172, 0.9);
-  flex: 1;
-}
+  header nav .menu-left {
+    flex: 1;
+  }
+
+  /* HAUPTBEREICH */
+
+  /* Hintergrund des Hauptbereichs */
+  main {
+    padding: var(--content-padding);
+    background: rgba(70, 24, 172, 0.9);
+    flex: 1;
+  }
 }
 
 .highlighter {

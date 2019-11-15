@@ -1,14 +1,24 @@
 /**
 * Stylesheet zur Klasse PageOverview: Startseite der App
 */
-/*Header*/
+/*Header
 header p {
-  color: white;
-  font-weight: bold;
-  padding: 15px;
-  margin: 0px 0px 0px 20px;
+color: white;
+font-weight: bold;
+padding: 15px;
+margin: 0px 0px 0px 20px;
 }
 
+*/
+
+header p {
+
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+  margin: 0.5em 0em 0em 1.25em;
+
+}
 /* Einzelne Kacheln */
 
 .container {
@@ -80,7 +90,22 @@ header p {
   opacity-color: rgb(245, 166, 35);
 
 }
-.container .price{
-    font-size:30pt;
-    color:black;
+.container .price {
+  font-size:30pt;
+  color:black;
+}
+
+@media (max-width: 1080px) {
+
+    .container {
+      opacity: 1;
+    }
+
+    .wrapper{
+      text-align: center;
+    }
+
+    .container button {
+      opacity: 1;
+    }
 }
