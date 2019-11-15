@@ -62,6 +62,19 @@ class PageDetail {
         html = html.replace(/{CURRENCY}/g, this._data.currency);
         html = html.replace(/{STATUS}/g, this._data.status);
         html = html.replace(/{VERFÜGBAR}/g, this._data.verfügbar);
+        html = html.replace(/{NVERFÜGBAR}/g, this._data.nverfügbar);
+        html = html.replace(/{BVERFÜGBAR}/g, this._data.bverfügbar);
+        html = html.replace(/{DETAIL1}/g, this._data.tDetail1);
+        html = html.replace(/{DETAIL1INF}/g, this._data.tDetail1Inf);
+        html = html.replace(/{DETAIL2}/g, this._data.tDetail2);
+        html = html.replace(/{DETAIL2INF}/g, this._data.tDetail2Inf);
+        html = html.replace(/{DETAIL3}/g, this._data.tDetail3);
+        html = html.replace(/{DETAIL3INF}/g, this._data.tDetail3Inf);
+        html = html.replace(/{DETAIL4}/g, this._data.tDetail4);
+        html = html.replace(/{DETAIL4INF}/g, this._data.tDetail4Inf);
+
+
+
 
 
 
