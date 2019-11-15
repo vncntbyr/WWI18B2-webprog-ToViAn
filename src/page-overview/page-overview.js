@@ -40,6 +40,12 @@ class PageOverview {
         document.querySelector("header .category #kameras").addEventListener("click", () => this.filter(pageDom, 40));
         document.querySelector("header .category #accessories").addEventListener("click", () => this.filter(pageDom, 50));
 
+        document.querySelector("#laptop").addEventListener("click", () => this.filter(pageDom, 10));
+        document.querySelector("#smartphone").addEventListener("click", () => this.filter(pageDom, 20));
+        document.querySelector("#monitore").addEventListener("click", () => this.filter(pageDom, 30));
+        document.querySelector("#kameras").addEventListener("click", () => this.filter(pageDom, 40));
+        document.querySelector("#accessories").addEventListener("click", () => this.filter(pageDom, 50));
+
         document.querySelector("header nav #logo").addEventListener("click", () => this.reload(pageDom));
 
         this._app.setPageTitle("Rent & Collect");

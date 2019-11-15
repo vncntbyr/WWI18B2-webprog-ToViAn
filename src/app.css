@@ -229,7 +229,7 @@ header .content h6 {
 
 /* Bearbeitung der Search-Bar */
 .topnav {
-  width: 45%;
+  width: 60%;
 }
 
 .topnav input[type=text] {
@@ -247,9 +247,11 @@ header .content h6 {
 
 /* Anpassung an große Bildschirme */
 @media (max-width: 1080px) {
+
   .small-screen-hidden {
     display: none;
   }
+
   #map {
     float: none;
   }
@@ -258,9 +260,11 @@ header .content h6 {
     width:105%;
     margin-bottom: 3em;
   }
+
   .category {
     display: none;
   }
+
 }
 
 @media (min-width: 1080px) {

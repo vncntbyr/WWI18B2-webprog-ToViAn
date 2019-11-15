@@ -105,6 +105,15 @@ header p {
       text-align: center;
     }
 
+    header p {
+
+      color: white;
+      font-weight: bolder;
+      font-size: 2em;
+      margin: 0em 0em 0em 0em;
+
+    }
+
     .container button {
       opacity: 1;
     }
