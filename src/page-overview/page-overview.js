@@ -35,7 +35,7 @@ class PageOverview {
         this._renderBoatTiles(pageDom);
 
         document.querySelector("header .category #laptop").addEventListener("click", () => this.filter(pageDom, 10));
-        document.querySelector("header .category #sets").addEventListener("click", () => this.filter(pageDom, 20));
+        document.querySelector("header .category #smartphone").addEventListener("click", () => this.filter(pageDom, 20));
         document.querySelector("header .category #monitore").addEventListener("click", () => this.filter(pageDom, 30));
         document.querySelector("header .category #kameras").addEventListener("click", () => this.filter(pageDom, 40));
         document.querySelector("header .category #accessories").addEventListener("click", () => this.filter(pageDom, 50));
@@ -74,7 +74,6 @@ class PageOverview {
 
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
-
 
         this._app.database.getRecordByCategory(n).forEach(hardware => {
             let html = templateElement.innerHTML;
