@@ -51,9 +51,9 @@ class App {
         document.querySelector("header nav .loggedin").addEventListener("mouseover", () => this.modalon());
         document.querySelector("header nav .loggedin").addEventListener("mouseout", () => this.modaloff());
 
-            //Event Listener für die Kategorien Navigator Leiste
-            ////////////////////////////////////////////////////
-    
+        //Logout Button
+        document.querySelector("header nav .loggedin #logout").addEventListener("click", () => this.logout());
+
 
         // Single Page Router starten und die erste Seite aufrufen
         window.addEventListener("hashchange", () => this._handleRouting());
@@ -90,6 +90,12 @@ class App {
     }
     modaloff(){
         document.querySelector("#information").style.display = "none";
+    }
+
+    //Logout Funktionieren
+    logout(){
+        document.querySelector("header nav .menu-right").style.display="flex";
+        document.querySelector("header nav .loggedin").style.display="none";
     }
 
 

@@ -1,19 +1,23 @@
 <header>
 </header>
 <main>
-    
-    <form id="registrierung "class   = "box">
+
+    <form id="signup" class="box">
 
         <h1>Registrierung</h1>
 
+        <!--Bei erfolgreichher Anmeldung-->
+        <div id="hidden">
+            Die Registrierung war erfolgreich!
+        </div>
         <!-- Vor- und Nachname -->
         <label for="firstname">
             Ihr Name:
             <span class="required">*</span>
         </label>
         <div class="side-by-side">
-            <input name="firstname" type="text" placeholder="Vorname" />
-            <input name="lastname" type="text" placeholder="Nachname" />
+            <input id="vorname" name="" type="text" placeholder="Vorname" />
+            <input id="nachname" name="" type="text" placeholder="Nachname" />
         </div>
 
         <!-- Emailadresse -->
@@ -21,14 +25,14 @@
             E-Mail:
             <span class="required">*</span>
         </label>
-        <input name="email" type="email" placeholder="email@example.com" />
+        <input id="email" name="" type="email" placeholder="email@example.com" />
 
         <!-- Passwort -->
         <label for="password">
             Passwort:
             <span class="required">*</span>
         </label>
-        <input name="password" type="password" placeholder="Password" />
+        <input id="password" name="" type="password" placeholder="Password" />
 
         <!-- Submit Button -->
         <input id="submit" type="submit" value="Abschicken"/>

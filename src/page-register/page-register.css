@@ -73,6 +73,14 @@ input[type="submit"]:hover {
     border-color: #00B19D;
 
 }
+
+/*Registrierung war erfolgreich Schriftzug*/
+#hidden{
+    display:none;
+    color:white;
+    padding: 5.5em;
+}
+
 /* Placeholder Größe */
 /*Chrome/Opera/Safari*/
 .box input[type= "text"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder, .box input[type="email"]::-webkit-input-placeholder {
