@@ -25,8 +25,8 @@ class Database {
         this._data = [
             {
                 id:          1,
-                img:        "images/Kamera.png",
-                name:       "CANON EOS 250D",
+                img:        "images/canoneos200d.png",
+                name:       "CANON EOS 200D",
                 preis1:     "64,90",
                 preis3:     "44,90",
                 preis6:     "29,90",
@@ -47,8 +47,8 @@ class Database {
                 category:   40,
             },{
                 id:          2,
-                img:        "images/Laptop.png",
-                name:       "APPLE MacBook Pro",
+                img:        "images/apple15macbookpro.png",
+                name:       "APPLE 15 Zoll MacBook Pro Touch Bar",
                 preis1:     "229,90",
                 preis3:     "169,90",
                 preis6:     "149,90",
@@ -69,12 +69,12 @@ class Database {
                 category:   10,
             },{
                 id:          3,
-                img:        "images/Maus.png",
+                img:        "images/acernitro.png",
                 name:       "ACER Nitro Gaming Maus",
-                preis1:     "99",
-                preis3:     "199",
-                preis6:     "499",
-                preis12:    "899",
+                preis1:     "26,90",
+                preis3:     "16,90",
+                preis6:     "14,90",
+                preis12:    "12,90",
                 status:     "available",
                 size:       "medium",
                 verfügbar:  "images/verfügbar.png",
@@ -137,7 +137,7 @@ class Database {
                 category:   20,
             },{
                 id:          6,
-                img:        "images/Tastatur.png",
+                img:        "images/Roccatvulcan.png",
                 name:       "Roccat Vulcan 120 AIMO",
                 preis1:     "22,90",
                 preis3:     "12,90",
@@ -160,7 +160,7 @@ class Database {
                 category:   50,
             },{
                 id:          7,
-                img:        "images/Laptop.png",
+                img:        "images/Surfacepro.png",
                 name:       "MICROSOFT Surface Pro X 16GB",
                 preis1:     "119,90",
                 preis3:     "79,90",
@@ -182,7 +182,7 @@ class Database {
                 category:   10,
             },{
                 id:          8,
-                img:        "images/Smartphone.png",
+                img:        "images/huaweip30pro.png",
                 name:       "HUAWEI P30 Pro 128GB",
                 preis1:     "139,90",
                 preis3:     "109,90",
