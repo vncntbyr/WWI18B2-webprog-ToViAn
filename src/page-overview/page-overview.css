@@ -46,6 +46,7 @@ header p {
 .container img {
   position: relative;
   max-height: 90%;
+  max-width: 90%;
   object-fit: cover;
   display: block;
   transition: .5s ease;
