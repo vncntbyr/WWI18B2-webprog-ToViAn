@@ -6,7 +6,7 @@ header p {
   color: white;
   font-weight: bold;
   padding: 15px;
-  margin-left: 20px;
+  margin: 0px 0px 0px 20px;
 }
 
 /* Einzelne Kacheln */
@@ -16,6 +16,7 @@ header p {
   background: #ffffff;
   border-radius: 40px;
   margin: 0.5em;
+  margin-top: 0;
   text-align: center;
   font-weight: bold;
   border: 3px solid rgb(70, 24, 172);
@@ -46,6 +47,7 @@ header p {
 .container img {
   position: relative;
   max-height: 90%;
+  max-width: 90%;
   object-fit: cover;
   display: block;
   transition: .5s ease;

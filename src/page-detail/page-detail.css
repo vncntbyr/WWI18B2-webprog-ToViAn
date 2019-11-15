@@ -29,7 +29,8 @@
 .container .imgBX img
 {
   position: relative;
-  width: 30em;
+  max-width: 22em;
+  max-height: 22em;
 }
 .container .details
 {
