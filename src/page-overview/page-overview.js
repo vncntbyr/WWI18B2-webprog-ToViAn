@@ -34,13 +34,13 @@ class PageOverview {
 
         this._renderBoatTiles(pageDom);
 
-        document.querySelector("header .category #laptop").addEventListener("click", () => this.reload(pageDom, 10));
-        document.querySelector("header .category #sets").addEventListener("click", () => this.reload(pageDom, 20));
-        document.querySelector("header .category #monitore").addEventListener("click", () => this.reload(pageDom, 30));
-        document.querySelector("header .category #kameras").addEventListener("click", () => this.reload(pageDom, 40));
-        document.querySelector("header .category #accessories").addEventListener("click", () => this.reload(pageDom, 50));
+        document.querySelector("header .category #laptop").addEventListener("click", () => this.filter(pageDom, 10));
+        document.querySelector("header .category #sets").addEventListener("click", () => this.filter(pageDom, 20));
+        document.querySelector("header .category #monitore").addEventListener("click", () => this.filter(pageDom, 30));
+        document.querySelector("header .category #kameras").addEventListener("click", () => this.filter(pageDom, 40));
+        document.querySelector("header .category #accessories").addEventListener("click", () => this.filter(pageDom, 50));
 
-        document.querySelector("header nav #logo").addEventListener("click", () => this.reloadall(pageDom));
+        document.querySelector("header nav #logo").addEventListener("click", () => this.reload(pageDom));
 
         this._app.setPageTitle("Rent & Collect");
         this._app.setPageCss(css);
@@ -70,7 +70,7 @@ class PageOverview {
         });
     }
 
-    reload(pageDom, n){
+    filter(pageDom, n){
 
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
@@ -87,19 +87,8 @@ class PageOverview {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
-    reloadall(pageDom) {
-        let mainElement = pageDom.querySelector("main");
-        let templateElement = pageDom.querySelector("#template-tile");
-
-        this._app.database.getAllRecords().forEach(hardware => {
-            let html = templateElement.innerHTML;
-            html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
-            html = html.replace("{IMG}", hardware.img);
-            html = html.replace("{NAME}", hardware.name);
-            html = html.replace("{PREIS}", hardware.preis);
-
-            mainElement.innerHTML += html;
-        });
+    reload(pageDom) {
+        this._renderBoatTiles(pageDom);
         this._app.setPageContent(pageDom.querySelector("main"));
 
     }
