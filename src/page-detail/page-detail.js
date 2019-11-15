@@ -58,8 +58,10 @@ class PageDetail {
         // Platzhalter mit den eingelesenen Daten ersetzen
         html = html.replace(/{IMG}/g, this._data.img);
         html = html.replace(/{NAME}/g, this._data.name);
-        html = html.replace(/{PREIS}/g, this._data.preis1);
-        html = html.replace(/{CURRENCY}/g, this._data.currency);
+        html = html.replace(/{PREIS1}/g, this._data.preis1);
+        html = html.replace(/{PREIS3}/g, this._data.preis3);
+        html = html.replace(/{PREIS6}/g, this._data.preis6);
+        html = html.replace(/{PREIS12}/g, this._data.preis12);
         html = html.replace(/{STATUS}/g, this._data.status);
         html = html.replace(/{VERFÜGBAR}/g, this._data.verfügbar);
         html = html.replace(/{NVERFÜGBAR}/g, this._data.nverfügbar);
@@ -74,10 +76,6 @@ class PageDetail {
         html = html.replace(/{DETAIL4INF}/g, this._data.tDetail4Inf);
 
 
-
-
-
-
         // HTML-Template in echte DOM-Objekte umwandeln, damit wir es mit den
         // DOM-Methoden von JavaScript weiterbearbeiten können
         let pageDom = document.createElement("div");
@@ -87,17 +85,17 @@ class PageDetail {
         pageDom.querySelectorAll(".id").forEach(e => e.textContent = this._recordId);
         //pageDom.querySelector("#show-more-button").addEventListener("click", () => this._onShowMoreButtonClicked());
 
-        pageDom.querySelector("#einMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis1, this._data.currency));
-        pageDom.querySelector("#dreiMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis3, this._data.currency));
-        pageDom.querySelector("#sechsMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis6, this._data.currency));
-        pageDom.querySelector("#zwölfMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis12, this._data.currency));
+        pageDom.querySelector("#einMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis1));
+        pageDom.querySelector("#dreiMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis3));
+        pageDom.querySelector("#sechsMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis6));
+        pageDom.querySelector("#zwölfMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis12));
 
 
         // Fertig bearbeitetes HTML-Element zurückgeben
         return pageDom;
     }
 
-    _PreisWechsel(preisNeu, währung) {
-      document.getElementById("preis").innerHTML = preisNeu + " "+ währung;
+    _PreisWechsel(preisNeu) {
+      document.getElementById("preis").innerHTML = preisNeu + " €";
         }
 }
