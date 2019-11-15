@@ -346,7 +346,6 @@ span.zeitraumAuswahl > input:checked ~ label {
   letter-spacing: 2px;
   margin-top: 20px;
   color: rgb(36, 16, 90);
-  margin-left: 3em;
 }
 
 .infoBX td
