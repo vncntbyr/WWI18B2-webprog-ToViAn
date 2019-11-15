@@ -78,6 +78,34 @@ class PageOverview {
 
     filter(pageDom, n){
 
+      switch (n) {
+  case 10:
+
+    document.querySelector(" header .wrapper #title").innerHTML ="Laptops";
+    break;
+
+  case 20:
+    document.querySelector(" header .wrapper #title").innerHTML ="Smartphones";
+    break;
+
+  case 30:
+  document.querySelector(" header .wrapper #title").innerHTML ="Monitore";
+    break;
+
+  case 40:
+  document.querySelector(" header .wrapper #title").innerHTML ="Kameras";
+    break;
+
+  case 50:
+  document.querySelector(" header .wrapper #title").innerHTML ="Zubehör";
+    break;
+
+  default:
+  console.log("default case");
+  alert("fehler");
+    break;
+}
+
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
 

@@ -36,7 +36,7 @@ class PageRegister {
 
         pageDom.querySelector("#signup").addEventListener("submit", (e) => this.stopsubmit(e));
 
-        this._app.setPageTitle("Registrierung");
+        this._app.setPageTitle(`Startseite`, {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));

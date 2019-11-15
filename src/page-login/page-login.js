@@ -44,7 +44,7 @@ class PageLogin {
         pageDom.querySelector("#resetmodal").addEventListener("submit", (e) => this.sendmail(e));
 
 
-        this._app.setPageTitle("R&C - Login");
+        this._app.setPageTitle(`Startseite`, {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
