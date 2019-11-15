@@ -67,6 +67,14 @@ class PageLogin {
                 document.querySelector("#email").style.display ="none";
                 document.querySelector("#password").style.display ="none";
                 document.querySelector("#submit").style.display ="none";
+
+                //Login und Registrieren ausblenden
+                document.querySelector("header nav .menu-right").style.display="none";
+                document.querySelector("header nav .loggedin").style.display="block";
+                //Seite nach 0.5s zur Startseite wechseln
+                setTimeout(function(){
+                    window.location.href = "/#"}
+                , 400);
             } else {
                 alert("Die Eingegebenen Daten sind falsch");
                 document.querySelector("#email").value = "";
@@ -75,8 +83,6 @@ class PageLogin {
                 //unsichtbares Div zum Anzeigen bringen/Text erzeugen der sagt, dass der Login fehlgeschlagen ist
                 //zusätzlich rotes Anzeigen der Login Felder
             }
-        document.querySelector("header nav .menu-right").style.display="none";
-        document.querySelector("header nav .loggedin").style.display="block";
     }
 
 }
