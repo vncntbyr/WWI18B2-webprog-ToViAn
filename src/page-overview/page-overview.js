@@ -64,7 +64,7 @@ class PageOverview {
             html = html.replace("{HREF}", `#/Detail/${hardware.id}`);
             html = html.replace("{IMG}", hardware.img);
             html = html.replace("{NAME}", hardware.name);
-            html = html.replace("{PREIS}", hardware.preis);
+            html = html.replace("{PREIS}", hardware.preis12);
 
             mainElement.innerHTML += html;
         });
