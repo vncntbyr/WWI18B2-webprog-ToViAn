@@ -19,6 +19,8 @@ header p {
   text-align: center;
   font-weight: bold;
   border: 3px solid rgb(70, 24, 172);
+  width: 18.5em;
+  max-height: auto;
 }
 
 .container:hover {
@@ -29,13 +31,21 @@ header p {
   text-align: center;
   font-weight: bold;
   border: 3px solid rgb(245, 166, 35);
+}
 
+.container .bild
+{
+  width: auto;
+  height: 10em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container img {
-  width: 18.5em;
-  height: 10em;
-  max-width: 100%;
+  position: relative;
+  max-height: 90%;
   object-fit: cover;
   display: block;
   transition: .5s ease;
