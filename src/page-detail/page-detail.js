@@ -37,7 +37,7 @@ class PageDetail {
 
         // Seite zur Anzeige bringen
         let pageDom = this._processTemplate(html);
-
+        /*this._renderDetails(html, 1);*/
 
         this._app.setPageTitle(`Startseite`, {isSubPage: true});
         this._app.setPageCss(css);
@@ -45,6 +45,19 @@ class PageDetail {
         this._app.setPageContent(pageDom.querySelector("main"));
 
 
+    }
+/*
+    _renderDetails(html, n) {
+
+            let data2 = this._app.database.getRecordById(n)
+
+            html = html.replace("{HREF}", `#/Detail/${data2.id}`);
+            html = html.replace("{IMG}", data2.img);
+            html = html.replace("{NAME}", data2.name);
+            html = html.replace("{PREIS}", data2.preis12);
+
+            pagedom.innerHTML += html;
+        });
     }
 
      /**
