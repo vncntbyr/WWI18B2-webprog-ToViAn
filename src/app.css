@@ -151,7 +151,7 @@ header nav .loggedin .information{
   width:10%;
   height:auto ;
   text-align:center;
-  transform: translate(-30%, 10%);
+  transform: translate(-30%, 4.5%);
 }
 header nav .loggedin .information ul{
   list-style: none;
