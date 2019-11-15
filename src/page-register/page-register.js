@@ -34,9 +34,9 @@ class PageRegister {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
 
-        pageDom.querySelector("#submit").addEventListener("submit", (e) => this.stopsubmit(e));
+        pageDom.querySelector("#signup").addEventListener("submit", (e) => this.stopsubmit(e));
 
-        this._app.setPageTitle("Passwort zurücksetzen");
+        this._app.setPageTitle("Registrierung");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
@@ -45,7 +45,35 @@ class PageRegister {
     stopsubmit(e){
         //Nachladen verhindern bzw Submit Button hat jetzt keine Funktion (wegen des Umfangs)
         e.preventDefault();
+
+        if(document.getElementById("vorname").value == "" || document.getElementById("nachname").value =="" || document.getElementById("password").value =="") {
+            //Felder wurden nicht ausgefüllt
+            alert("Bitte Angaben machen");
+            document.getElementById("vorname").value = "";
+            document.getElementById("nachname").value ="";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value ="";
+        } else {
+            //Jedes notwendige Feld wurde auusgefüllt
+            document.getElementById("vorname").value = "";
+            document.getElementById("nachname").value ="";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value ="";
+
+            document.getElementById("hidden").style.display = "block";
+            document.getElementById("vorname").style.display ="none";
+            document.getElementById("nachname").style.display ="none";
+            document.getElementById("email").style.display ="none";
+            document.getElementById("password").style.display ="none";
+            document.getElementById("submit").style.display ="none";
+
+            //nach kurzem Warten wird man zum Login weitergeführt
+            setTimeout(function(){
+                window.location.href = "/#/Login"}
+            , 550);
+        }
     }
+
 
 
 }

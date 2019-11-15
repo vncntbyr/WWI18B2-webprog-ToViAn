@@ -179,13 +179,18 @@ header nav .loggedin .information a{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  margin-left: 10px;
+  margin-left: 1em;
   cursor:pointer;
 }
 
 .category a:hover {
   background-color:rgb(33, 19, 70);
   color: rgb(250, 197, 24);
+}
+
+#map {
+  float: right;
+  margin-right: 0.5em;
 }
 
 
@@ -224,7 +229,7 @@ header .content h6 {
 
 /* Bearbeitung der Search-Bar */
 .topnav {
-  width: 50%;
+  width: 45%;
 }
 
 .topnav input[type=text] {

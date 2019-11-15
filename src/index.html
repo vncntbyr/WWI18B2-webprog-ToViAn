@@ -10,6 +10,7 @@
 <link rel="manifest" href="/favicons/site.webmanifest">
 <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
 <link rel="shortcut icon" href="/favicons/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="msapplication-TileColor" content="#603cba">
 <meta name="msapplication-config" content="/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -106,13 +107,13 @@
       <!--Menü oben rechts mit Login und Registrierungsbutton -->
       <ul class="menu-right small-screen-hidden">
         <li>
-          <a href="#/Login">
+          <a href="#/Login"><i class="fa fa-fw fa-sign-in"></i>
             Login
             <span class="small-screen-only">Login</span>
           </a>
         </li>
         <li>
-          <a href="#/Registrierung">
+          <a href="#/Registrierung"><i class="fa fa-fw fa-id-card"></i>
             Registrieren
             <span class="small-screen-only">Registrieren</span>
           </a>
@@ -137,7 +138,7 @@
                               <a href="/#/Zahlvorgang">Checkout</a>
                           </li>
                           <li>
-                              <a href="/#/Detail/2">Laptop</a>
+                              <a id="logout">Logout</a>
                           </li>
                       </ul>
                   </div>
@@ -146,12 +147,12 @@
     </nav>
 
     <div class="category">
-      <a id="laptop">Laptops</a>
-      <a id ="smartphone">Smartphones</a>
-      <a id="monitore">Monitore</a>
-      <a id="kameras">Kameras</a>
-      <a id="accessories">Zubehör</a>
-      <a href="#/Karte">Karte</a>
+      <a id="laptop"><i class="fa fa-fw fa-laptop"></i> Laptops</a>
+      <a id ="smartphone"><i class="fa fa-fw fa-mobile"></i> Smartphones</a>
+      <a id="monitore"><i class="fa fa-fw fa-desktop"></i> Monitore</a>
+      <a id="kameras"><i class="fa fa-fw fa-camera"></i> Kameras</a>
+      <a id="accessories"><i class="fa fa-fw fa-keyboard-o"></i> Zubehör</a>
+      <a id="map" href="#/Karte"><i class="fa fa-fw fa-map"></i> Karte</a>
     </div>
 
     <div class="content">
