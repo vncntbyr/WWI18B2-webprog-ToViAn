@@ -32,7 +32,7 @@ class PageOverview {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
 
-        this._renderBoatTiles(pageDom);
+        this._renderHardwareTiles(pageDom);
 
         document.querySelector("header .category #laptop").addEventListener("click", () => this.filter(pageDom, 10));
         document.querySelector("header .category #smartphone").addEventListener("click", () => this.filter(pageDom, 20));
@@ -61,7 +61,7 @@ class PageOverview {
      * @param {HTMLElement} pageDom Wurzelelement der eingelesenen HTML-Datei
      * mit den HTML-Templates dieser Seite.
      */
-    _renderBoatTiles(pageDom) {
+    _renderHardwareTiles(pageDom) {
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
 
@@ -93,7 +93,7 @@ class PageOverview {
     }
 
     reload(pageDom) {
-        this._renderBoatTiles(pageDom);
+        this._renderHardwareTiles(pageDom);
         this._app.setPageContent(pageDom.querySelector("main"));
 
     }

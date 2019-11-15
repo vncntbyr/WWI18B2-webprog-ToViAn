@@ -37,8 +37,11 @@ class PageLogin {
         pageDom.querySelector("#reset").addEventListener("click", () => this.openresetmodal());
         pageDom.getElementsByClassName("close")[0].addEventListener("click", () => this.closeresetmodal());
 
-        //Buttonlistener um form zu submitten und abzugleichen
+        //Buttonlistener um form box zu submitten und abzugleichen
         pageDom.querySelector("#login").addEventListener("submit", (e) => this.submitform(e));
+
+        //ButtonListener für box2 im Modal => Passwortreset
+        pageDom.querySelector("#resetmodal").addEventListener("submit", (e) => this.sendmail(e));
 
 
         this._app.setPageTitle("R&C - Login");
@@ -83,6 +86,17 @@ class PageLogin {
                 //unsichtbares Div zum Anzeigen bringen/Text erzeugen der sagt, dass der Login fehlgeschlagen ist
                 //zusätzlich rotes Anzeigen der Login Felder
             }
+    }
+    sendmail(e) {
+        //Nachladen verhindern bzw Submit Button hat jetzt keine Funktion (wegen des Umfangs)
+        e.preventDefault();
+        if(document.querySelector("#resetemail").value.toLowerCase() == "testemail@test.de"){
+            alert("Ihr Passwort ist: 42");
+        } else {
+            alert("Zu ihrer Email wurde kein Passwort gefunden");
+        }
+
+
     }
 
 }

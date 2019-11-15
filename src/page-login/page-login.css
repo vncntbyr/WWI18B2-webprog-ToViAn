@@ -51,6 +51,10 @@
     transition: 0.25s;
     cursor: pointer;
 }
+.box input[type= "submit"]:hover {
+    background: #CD2A5F;
+}
+
 /*Email Eingabe im Modal*/
 .box2 input[type= "email"]{
     border: 0;
@@ -59,17 +63,19 @@
     margin: 30px auto;
     text-align: center;
     border: 3px solid 	#EF850B;
-    padding: 19px 32px;
-    width: 20em;
+    padding: 10px 15px;
+    width: 15em;
     outline: none;
     color: black;
-    font-size: 1em;
     border-radius: 24px; /* macht rund */
     transition: 0.25s;
+    font-size: 18pt;
 }
-.box input[type= "submit"]:hover {
-    background: #CD2A5F;
+.box2 input[type= "email"]:focus{
+    width: 20em;
+    border-color: #00B19D;
 }
+
 /* Placeholder Größe */
 /*Chrome/Opera/Safari*/
 .box input[type= "email"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder {
@@ -97,7 +103,7 @@ main a{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   left: 0;
-  top: 0;
+  top: -6%;
   z-index: 1; /* Sit on top */
   width: 100%; /* Full width */
   height: 300%; /* Full height */
@@ -113,6 +119,27 @@ main a{
   padding: 20px;
   width: 80%; /* Could be more or less, depending on screen size */
   border-radius:40px;
+}
+
+.modal input[type= "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    font-size:1em;
+    text-align: center;
+    border: 3px solid #CD2A5F;
+    padding: 10px 25px;
+    width: 200px;
+    outline: none;
+    color:black;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
+    cursor: pointer;
+}
+.modal input[type= "submit"]:hover{
+    background: #CD2A5F;
+    color:white;
 }
 
 /* The Close Button */
@@ -140,23 +167,28 @@ main a{
 /*Box anpassen für kleinere Geräte, dass es die Head Zeile nicht überlappt*/
 /*Ebenso Anpassung der Dateneingabe, damit es den Bildschirm nicht überschreitet --> keine Verlängerung sondern nur Farbänderung der Border*/
 /*Auch Anpassung der Schriftgröße*/
-@media (max-width: 80em) {
+
+/******************************************************************************************************/
+/************************************ALLES UNTER 1080PX GRÖßE (Tablets)********************************/
+/******************************************************************************************************/
+@media (max-width: 1080px) {
 
     .box input[type= "email"], .box input[type = "password"] {
         border: 4px solid 	#EF850B;
         width: 15em;
-        padding: 15px 20px;
-        font-size: 20pt;
+        padding: 10px 15px;
+        font-size: 16pt;
 
     }
     .box input[type= "email"]:focus, .box input[type = "password"]:focus {
-        width:20em;
+        width:17.5em;
     }
     main{
-        font-size: 2em;
+        font-size: 1em;
     }
     .box{
-        width: 100%;
+        width: 90%;
+        margin-bottom: 1em;
     }
     .box input[type= "submit"] {
         background: #CD2A5F;
@@ -166,5 +198,94 @@ main a{
     .box input[type= "submit"]:focus {
         background: #691732;
         border-color: #691732;
+    }
+    .box2 input[type="email"]{
+        width: 15em;
+    }
+    .box2 input[type="email"]:focus{
+        width: 20em;
+    }
+    .box2 input[type="submit"]{
+        background: #CD2A5F;
+        color:white;
+    }
+    /* Placeholder Größe */
+    /*Chrome/Opera/Safari*/
+    .box input[type= "email"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder {
+        font-size: 16pt;
+    }
+    /*Mozilla Firefox 19+*/
+    .box input[type= "email"]::-moz-placeholder, .box input[type = "password"]::-moz-placeholder {
+        font-size: 16pt;
+    }
+    /*Internet Explorer*/
+    .box input[type= "email"]:-ms-input-placeholder, .box input[type = "password"]:-ms-input-placeholder {
+        font-size: 16pt;
+    }
+    /*Mozilla Firefox 18-*/
+    .box input[type= "email"]:-moz-placeholder, .box input[type = "password"]:-moz-placeholder {
+        font-size: 16pt;
+    }
+}
+
+/******************************************************************************************************/
+/************************************ALLES UNTER 650PX GRÖßE (HANDYS)**********************************/
+/******************************************************************************************************/
+
+@media (max-width: 650px) {
+    .box input[type= "email"], .box input[type = "password"] {
+        border: 4px solid 	#EF850B;
+        width: 12.5em;
+        padding: 10px 5px;
+        font-size: 14pt;
+
+    }
+    .box input[type= "email"]:focus, .box input[type = "password"]:focus {
+        width:12.5em;
+
+    }
+    main{
+        font-size: 1em;
+    }
+    .box{
+        width: 90%;
+        margin-bottom: 1em;
+    }
+    .box input[type= "submit"] {
+        background: #CD2A5F;
+    }
+    .box input[type= "submit"]:hover {/*do nothing*/}
+    .box input[type= "submit"]:focus {
+        background: #691732;
+        border-color: #691732;
+    }
+
+    .box2 input[type="email"]{
+        width: 12.5em;
+    }
+    .box2 input[type="email"]:focus{
+        width: 12.5em;
+    }
+    .box2 input[type="submit"]{
+        background: #CD2A5F;
+        color:white;
+    }
+
+    /* Placeholder Größe */
+    /*Chrome/Opera/Safari*/
+    .box input[type= "email"]::-webkit-input-placeholder, .box input[type = "password"]::-webkit-input-placeholder {
+        font-size: 14pt;
+    }
+    /*Mozilla Firefox 19+*/
+    .box input[type= "email"]::-moz-placeholder, .box input[type = "password"]::-moz-placeholder {
+        font-size: 14pt;
+    }
+    /*Internet Explorer*/
+    .box input[type= "email"]:-ms-input-placeholder, .box input[type = "password"]:-ms-input-placeholder {
+        font-size: 14pt;
+    }
+    /*Mozilla Firefox 18-*/
+    .box input[type= "email"]:-moz-placeholder, .box input[type = "password"]:-moz-placeholder {
+        font-size: 14pt;
     }
 }

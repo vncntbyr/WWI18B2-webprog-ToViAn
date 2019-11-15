@@ -379,12 +379,23 @@ span.zeitraumAuswahl > input:checked ~ label {
 
 .wArtikel table{
   border-collapse: collapse;
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wArtikel td
 {
 width: 30em;
 border: 2px solid #fff;
+padding: 0;
+}
+
+.wArtikel tr
+{
+  height: 6em;
 }
 
 
@@ -394,10 +405,20 @@ opacity: 0.3;
 }
 
 
-.wArtikel img
+.wArtikel .img
 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   float: left;
-  max-width:8em
+  max-width: 7em;
+  height: 7em;
+}
+
+.img img
+{
+  max-height: 90%;
+  max-width: 90%;
 }
 
 .wArtikel .info
