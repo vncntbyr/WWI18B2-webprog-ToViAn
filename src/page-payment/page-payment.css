@@ -1,6 +1,6 @@
 /*Gestaltung der Inhalts Box*/
 .box{
-    width: 50%;
+    width: 55%;
     padding: 0px;
     background: white;
     text-align: center;
@@ -80,7 +80,6 @@
 /*Übersicht*/
 #content-overview{
     display:block;
-
 }
 #content-overview li{
     list-style:none;
@@ -99,16 +98,9 @@
     display:none;
 }
 
-
-
-
-
-
-
-
-
 /*Gestaltung des Weiter Knopfes*/
 .positioner{
+
     text-align:right;
 }
 #next{
@@ -117,4 +109,56 @@
     margin-bottom:15px;
     display:inline-block;
 
+}
+
+/******************************************************************************************************/
+/************************************ALLES UNTER 1080PX GRÖßE (Tablets)********************************/
+/******************************************************************************************************/
+@media (max-width: 1600px) {
+
+    .box{
+        width: 90%;
+        margin-bottom: 1em;
+    }
+    .pagination #overview{
+        padding-left:15px;
+
+    }
+    .pagination #finish{
+        padding-left:25px;
+
+    }
+    .pagination a{
+        margin:6px 1px;
+        width: 90px;
+        height:60px;
+        font-size:14px;
+        line-height:400%;
+    }
+}
+
+/******************************************************************************************************/
+/************************************ALLES UNTER 650PX GRÖßE (HANDYS)**********************************/
+/******************************************************************************************************/
+
+@media (max-width: 650px) {
+    .box{
+        width: 90%;
+        margin-bottom: 1em;
+    }
+    .pagination #overview{
+        padding-left:15px;
+
+    }
+    .pagination #finish{
+        padding-left:25px;
+
+    }
+    .pagination a{
+        margin:6px 1px;
+        width: 90px;
+        height:60px;
+        font-size:14px;
+        line-height:400%;
+    }
 }

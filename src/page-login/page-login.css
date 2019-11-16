@@ -173,6 +173,10 @@ main a{
 /******************************************************************************************************/
 @media (max-width: 1080px) {
 
+    main{
+        font-size: 1em;
+    }
+
     .box input[type= "email"], .box input[type = "password"] {
         border: 4px solid 	#EF850B;
         width: 15em;
@@ -183,9 +187,7 @@ main a{
     .box input[type= "email"]:focus, .box input[type = "password"]:focus {
         width:17.5em;
     }
-    main{
-        font-size: 1em;
-    }
+
     .box{
         width: 90%;
         margin-bottom: 1em;

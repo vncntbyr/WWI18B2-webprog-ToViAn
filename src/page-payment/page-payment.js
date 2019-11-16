@@ -43,7 +43,7 @@ class PagePayment {
         //Event Listener für den Weiter Knopf
         pageDom.querySelector("#next").addEventListener("click", () => this.switchpage(this.counter));
 
-        this._app.setPageTitle("R&C - Zahlvorgang");
+        this._app.setPageTitle(`Startseite`, {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
