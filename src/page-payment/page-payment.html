@@ -1,19 +1,56 @@
 <header>
 </header>
 <main>
-    <form id="payment"class="box">
+    <div id="payment"class="box">
 
             <div class="pagination">
-                <a  class="step-first" data-step-number="1">1</a>
-                <a  class="step" data-step-number="2">2</a>
-                <a  class="step" data-step-number="3">3</a>
-                <a  class="step-last" data-step-number="4">4</a>
+                <a  class="step" id="overview">Übersicht</a>
+                <a  class="step" id="adress">Adresse</a>
+                <a  class="step" id="paymethod">Zahlung</a>
+                <a  class="step" id="finish">Abschließen</a>
             </div>
+
+            <div id="content-overview">
+                <br />
+                <ul>
+                    <li>
+                        Artikel 1
+                    </li>
+                    <li>
+                        Artikel 2
+                    </li>
+                </ul>
+            </div>
+
+            <div id="content-adress">
+                <br />
+                Adresse
+                <form>
+                        <input id ="inp1" type="text" name="" placeholder=""/>
+                        <input id ="inp2" type="text" name="" placeholder=""/>
+                        <input id ="inp3" type="text" name="" placeholder=""/>
+                        <input id ="inp4" type="text" name="" placeholder=""/>
+                </form>
+            </div>
+
+            <div id="content-paymethod">
+                <br />
+                Zahlung
+                Hier eine Art Button, welcher ein neues Menü öffnet einfügen.
+            </div>
+
+            <div id="content-finish">
+                <br />
+                Ende
+                Hier eine Ansicht, dass die Bestellung erfolgreich abgeschlossen wurde
+            </div>
+
+
 
             <div class="positioner">
             <button id="next">Weiter</button>
             </div
 
 
-    </form>
+    </div>
 </main>

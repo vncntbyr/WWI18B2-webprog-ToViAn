@@ -4,13 +4,16 @@
 *   Klasse PageLogin:Ermöglicht dem Benutzer das Anmelden
 **/
 class PagePayment {
+
+
+
     /**
      * Konstruktor
      * @param {App} app Zentrale Instanz der App-Klasse
      */
     constructor(app) {
         this._app = app;
-        let counter = 0;
+        this.counter = 1;
     }
 
     /**
@@ -34,8 +37,11 @@ class PagePayment {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
 
+        //Setzt ersten Tab bei Start der Seite aktiv
+        pageDom.querySelector("#overview").classList.add("active");
 
-        pageDom.querySelector("#next").addEventListener("click", () => this.switchpage());
+        //Event Listener für den Weiter Knopf
+        pageDom.querySelector("#next").addEventListener("click", () => this.switchpage(this.counter));
 
         this._app.setPageTitle("R&C - Zahlvorgang");
         this._app.setPageCss(css);
@@ -43,16 +49,38 @@ class PagePayment {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
-    switchpage(){
-        alert("Hilfe");
-        let stepElements = document.querySelectorAll(".pagination .step");
-        stepElements.forEach(e => e.classList.remove("active"));
+    //Diese Funktion schaltet zwischen der verschiedenen Seiten durch
+    switchpage(counter){
 
+        switch(counter) {
+            //Standardsicht entfernen, Adresseingabensicht aktivieren
+            case 1:
+            document.querySelector("#overview").classList.remove("active");
+            document.querySelector("#adress").classList.add("active");
+            document.querySelector("#content-overview").style.display ="none";
+            document.querySelector("#content-adress").style.display ="block";
+            this.counter = 2;
+            break;
 
+            //Adresseingabensicht entfernen, Zahlungssicht aktivieren
+            case 2:
+            document.querySelector("#adress").classList.remove("active");
+            document.querySelector("#paymethod").classList.add("active");
+            document.querySelector("#content-adress").style.display ="none";
+            document.querySelector("#content-paymethod").style.display ="block";
+            this.counter = 3;
+            break;
 
-        let currentStep = 1;
+            //Zahlungssiccht entfernen, Bestellabschlusssicht aktivieren
+            case 3:
+            document.querySelector("#paymethod").classList.remove("active");
+            document.querySelector("#finish").classList.add("active");
+            document.querySelector("#content-paymethod").style.display ="none";
+            document.querySelector("#content-finish").style.display ="block";
+            document.querySelector("#next").style.display ="none";
+            break;
 
-        let currentStepElement = document.querySelector(`.pagination .step[data-step-number="${currentStep}"]`);
-        if (currentStepElement) currentStepElement.classList.add("active")
-    }
+        }
+
+}
 }
