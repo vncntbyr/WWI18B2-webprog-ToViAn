@@ -26,6 +26,8 @@ header p {
   background: #ffffff;
   border-radius: 40px;
   margin: 0.5em;
+  margin-left: 0.35em;
+  margin-right: auto;
   margin-top: 0;
   text-align: center;
   font-weight: bold;
@@ -98,6 +100,7 @@ header p {
 
     .container {
       opacity: 1;
+      margin-left: 0.6em;
     }
 
     .wrapper{

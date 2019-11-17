@@ -227,7 +227,7 @@ header .content h6 {
 
 /* Bearbeitung der Search-Bar */
 .topnav {
-  width: 55%;
+  width: 50%;
 }
 
 .topnav input[type=text] {
