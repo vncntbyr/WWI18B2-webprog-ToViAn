@@ -5,15 +5,15 @@
   <title>Rent & Collect</title>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-<link rel="manifest" href="/favicons/site.webmanifest">
-<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/favicons/favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<meta name="msapplication-TileColor" content="#603cba">
-<meta name="msapplication-config" content="/favicons/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Klasse App: Steuert die gesamte Anwendung -->
   <script src="app.js"></script>
@@ -107,39 +107,44 @@
       <!--Menü oben rechts mit Login und Registrierungsbutton -->
       <ul class="menu-right small-screen-hidden">
         <div class="hide">
+          <li>
+            <a id="laptop"><i class="fa fa-fw fa-laptop"></i>
+              Laptops
+            </a>
+          </li>
+          <li>
+            <a id ="smartphone"><i class="fa fa-fw fa-mobile"></i>
+              Smartphones
+            </a>
+          </li>
+          <li>
+            <a id="monitore"><i class="fa fa-fw fa-desktop"></i>
+              Monitore
+            </a>
+          </li>
+          <li>
+            <a id="kameras"><i class="fa fa-fw fa-camera"></i>
+              Kameras
+            </a>
+          </li>
+          <li>
+            <a id="accessories"><i class="fa fa-fw fa-keyboard-o"></i>
+              Zubehör
+            </a>
+          </li>
+          <hr class="distancemap">
+          <li>
+            <a id="map" href="#/Karte"><i class="fa fa-fw fa-map"></i>
+              Standorte
+            </a>
+          </li>
+        </div>
+        <hr class="distancelog">
         <li>
-          <a id="laptop"><i class="fa fa-fw fa-laptop"></i>
-            Laptops
+          <a id="cart"><i class="fa fa-fw fa-shopping-cart"></i>
+            Warenkorb
           </a>
         </li>
-        <li>
-          <a id ="smartphone"><i class="fa fa-fw fa-mobile"></i>
-            Smartphones
-          </a>
-        </li>
-        <li>
-          <a id="monitore"><i class="fa fa-fw fa-desktop"></i>
-            Monitore
-          </a>
-        </li>
-        <li>
-          <a id="kameras"><i class="fa fa-fw fa-camera"></i>
-            Kameras
-          </a>
-        </li>
-        <li>
-          <a id="accessories"><i class="fa fa-fw fa-keyboard-o"></i>
-            Zubehör
-          </a>
-        </li>
-        <hr class="distancemap">
-        <li>
-          <a id="map" href="#/Karte"><i class="fa fa-fw fa-map"></i>
-            Standorte
-          </a>
-        </li>
-      </div>
-      <hr class="distancelog">
         <li>
           <a href="#/Login"><i class="fa fa-fw fa-sign-in"></i>
             Login
@@ -154,27 +159,27 @@
 
       <!--User mit Hover Effect, Menü oben rechts-->
       <ul class="loggedin">
+        <li>
+          <div class="test">
+            <span class="account">
+              <i class="icon-user"></i>
+              Testuser
+            </span>
+          </div>
+          <div id="information" class="information">
+            <ul>
               <li>
-                  <div class="test">
-                      <span class="account">
-                          <i class="icon-user"></i>
-                          Testuser
-                      </span>
-                  </div>
-                  <div id="information" class="information">
-                      <ul>
-                          <li>
-                              <a href="/#/Karte">Standorte</a>
-                          </li>
-                          <li>
-                              <a href="/#/Zahlvorgang">Checkout</a>
-                          </li>
-                          <li>
-                              <a id="logout">Logout</a>
-                          </li>
-                      </ul>
-                  </div>
+                <a href="/#/Karte">Standorte</a>
               </li>
+              <li>
+                <a href="/#/Zahlvorgang">Checkout</a>
+              </li>
+              <li>
+                <a id="logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
 
@@ -203,62 +208,62 @@
 </body>
 
 <footer>
-    <div class="footer-background"> <!-- Hintergrundfläche des Footers -->
-      <div class="footer-content"> <!-- Platz für Inhalte des Footers -->
-        <img class="part1" src="../images/part1.png"/> <!-- Erster Teil der Bezahlmöglichkeiten -->
-        <img class="part2" src="../images/part2.png"/> <!-- Zweiter Teil der Bezahlmöglichkeiten -->
+  <div class="footer-background"> <!-- Hintergrundfläche des Footers -->
+    <div class="footer-content"> <!-- Platz für Inhalte des Footers -->
+      <img class="part1" src="../images/part1.png"/> <!-- Erster Teil der Bezahlmöglichkeiten -->
+      <img class="part2" src="../images/part2.png"/> <!-- Zweiter Teil der Bezahlmöglichkeiten -->
 
-        <div class="footer-table">
-          <table width=100%>
-            <tr>
-              <th>Über R&C</th>
-              <th>Angebote</th>
-              <th>Hilfe</th>
-            </tr>
-            <tr>
-              <td> <a style="text-decoration:none" href="">Über uns</td>
+      <div class="footer-table">
+        <table width=100%>
+          <tr>
+            <th>Über R&C</th>
+            <th>Angebote</th>
+            <th>Hilfe</th>
+          </tr>
+          <tr>
+            <td> <a style="text-decoration:none" href="">Über uns</td>
               <td> <a style="text-decoration:none" href="">Top-Produkte</td>
-              <td> <a style="text-decoration:none" href="">So funktioniert's</td>
-            </tr>
-            <tr>
-              <td> <a style="text-decoration:none" href="">Kontaktieren Sie uns</td>
-              <td> <a style="text-decoration:none" href="">Deals</td>
-              <td> <a style="text-decoration:none" href="">FAQ</td>
-            </tr>
-            <tr>
-              <td> <a style="text-decoration:none" href="">Jobs</td>
-              <td> <a style="text-decoration:none" href="">Geschäftskunden</td>
-              <td> <a style="text-decoration:none" href="">Support-Ticket erstellen</td>
-            </tr>
-          </table>
-        </div>
+                <td> <a style="text-decoration:none" href="">So funktioniert's</td>
+                </tr>
+                <tr>
+                  <td> <a style="text-decoration:none" href="">Kontaktieren Sie uns</td>
+                    <td> <a style="text-decoration:none" href="">Deals</td>
+                      <td> <a style="text-decoration:none" href="">FAQ</td>
+                      </tr>
+                      <tr>
+                        <td> <a style="text-decoration:none" href="">Jobs</td>
+                          <td> <a style="text-decoration:none" href="">Geschäftskunden</td>
+                            <td> <a style="text-decoration:none" href="">Support-Ticket erstellen</td>
+                            </tr>
+                          </table>
+                        </div>
 
-        <hr>
+                        <hr>
 
-        <div class="footer-end">
-          <h5>rent&collect Group GmbH</h5>
+                        <div class="footer-end">
+                          <h5>rent&collect Group GmbH</h5>
 
-          <span class="imprint">
-            <a style="text-decoration:none" href="">
-              Impressum
-            </a>
-          </span>
+                          <span class="imprint">
+                            <a style="text-decoration:none" href="">
+                              Impressum
+                            </a>
+                          </span>
 
-          <span class="terms">
-            <a style="text-decoration:none" href="">
-              AGB
-            </a>
-          </span>
+                          <span class="terms">
+                            <a style="text-decoration:none" href="">
+                              AGB
+                            </a>
+                          </span>
 
-          <span class="data">
-            <a style="text-decoration:none" href="">
-              Datenschutzerklärung
-            </a>
-          </span>
+                          <span class="data">
+                            <a style="text-decoration:none" href="">
+                              Datenschutzerklärung
+                            </a>
+                          </span>
 
-        </div>
+                        </div>
 
-    </div>
-  </div>
-</footer>
-</html>
+                      </div>
+                    </div>
+                  </footer>
+                  </html>
