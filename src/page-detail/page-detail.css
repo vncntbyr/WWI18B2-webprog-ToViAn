@@ -224,7 +224,15 @@
 /**
 * Preis
 */
-.preisK h3
+.preis-wrap{
+    margin-top:2em;
+
+}
+.preisK{
+    padding-top:1.5em;
+    float:left;
+}
+#preis
 {
   margin: 0;
   padding: 0;
