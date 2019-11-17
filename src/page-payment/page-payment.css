@@ -29,7 +29,7 @@
     cursor:default;
 }
 
-/*Macht Ecken des erstes und des letzten Schritt rund*/
+/*Macht Ecken des ersten und des letzten Schritt rund*/
 .pagination #overview{
     padding-left:10px;
     border-radius: 30px 0 0 30px;
@@ -71,6 +71,7 @@
     left:100%;
 }
 
+/*SetztFarbe des aktiven Tabs auf Orange*/
 .pagination .active{
     color:	#EF850B;
 }
@@ -89,9 +90,71 @@
 #content-adress{
     display:none;
 }
+#content-adress input[type= "text"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 3px solid 	#EF850B;
+    padding: 10px 15px;
+    width: 15em;
+    outline: none;
+    color: black;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
+    font-size: 18pt;
+}
+
+/*Dropdown Leiste mit all den Ländern*/
+#content-adress select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 3px solid 	#EF850B;
+    padding: 10px 15px;
+    width: 15em;
+    outline: none;
+    color: black;
+    border-radius: 24px; /* macht rund */
+    transition: 0.25s;
+    font-size: 18pt;
+    cursor:pointer;
+    /*Erstellt Grenze, linke Hälfte des Dropdownpfeils, rechte Hälfte des Dropdownpfeils, färbt und positioniert*/
+    background-image:       linear-gradient(45deg, transparent 50%, #EF850B 50%),
+                            linear-gradient(135deg, #EF850B 50%, transparent 50%),
+                            linear-gradient(to right, #EF850B, #EF850B);
+
+    background-position:    calc(98% - 20px) calc(0.75em + 2px),
+                            calc(100% - 15px) calc(0.75em + 2px),
+                            calc(102% - 2.5em) 0em;
+
+    background-size:        12px 12px,
+                            12px 12px,
+                            2px 2.5em;
+
+    background-repeat: no-repeat;
+}
 /*Zahlung*/
 #content-paymethod{
     display:none;
+    text-align: center;
+}
+#content-paymethod .content-wrap {
+    padding: 5px 5px 5px 5px;
+    border: 4px solid #EF850B;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75em;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 20em;
+}
+#content-paymethod .content-wrap:hover{
+    background-color: #EF850B;
 }
 /*Abschließen*/
 #content-finish{
@@ -100,15 +163,12 @@
 
 /*Gestaltung des Weiter Knopfes*/
 .positioner{
-
     text-align:right;
 }
 #next{
-
     margin-right:15px;
     margin-bottom:15px;
     display:inline-block;
-
 }
 
 /******************************************************************************************************/
