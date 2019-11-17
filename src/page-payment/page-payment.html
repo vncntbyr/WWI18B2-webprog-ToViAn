@@ -13,7 +13,7 @@
             <div id="content-overview">
                 <br />
                 <div class="article-area">
-                        Hier stehen die ausgewählten Artikel
+                        Ihre ausgewählten Artikel:
                 </div>
             </div>
 
@@ -275,24 +275,23 @@
             </div>
 
             <div id="content-paymethod">
+
                 <br />
                 Zahlung
-                <div class="content-wrap">
+                <div id="paypal" class="content-wrap">
                     PayPal
                 </div>
-                <div class="content-wrap">
+                <div id="creditcard" class="content-wrap">
                     Kreditkarte/ Debitkarte
                 </div>
-                <div class="content-wrap">
+                <div id="transaction" class="content-wrap">
                     Sofortüberweisung
                 </div>
-
             </div>
 
             <div id="content-finish">
-                <br />
-                Ende
-                Hier eine Ansicht, dass die Bestellung erfolgreich abgeschlossen wurde
+
+                Ihre Bestellung wurde erfolgreich abgeschlossen
             </div>
 
 
@@ -302,5 +301,53 @@
             </div
 
 
+    </div>
+
+    <!--  Modal Paypal -->
+    <div id="paypalmodal">
+        <!-- Modal content -->
+        <div id="modal-content" class="modal-content">
+            <span class="close1 x">&times;</span>
+
+            Hier Paypaldaten eintragen
+            <br />
+            Email:
+            <input type="text" placeholder="Emailadresse" />
+            Passwort:
+            <input type="password" placeholder="Passwort" />
+        </div>
+    </div>
+
+    <!--  Modal Kreditkare-->
+    <div id="creditcardmodal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close2 x">&times;</span>
+
+            Hier Kreditkarteninformationen eintragen
+            <br />
+            Kartennummer:
+            <input type="text" placeholder="xxxxxxxxxx"/>
+            Ablaufdatum:
+            <input type="text" placeholder="xx/xx"/>
+            Sicherheitsnummer
+            <input type="text" placeholder="xxx"/>
+        </div>
+    </div>
+
+    <!--  Modal Sofortüberweisung -->
+    <div id="transactionmodal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close3 x">&times;</span>
+
+            Hier Transatkionsdaten eintragen
+            <br />
+            Kontonummer:
+            <input type="text" plcaeholder="xxxxxxxxxx"/>
+            Transaktionscode: ASIJ3434AOIJN3
+            <br />
+            Betrag: xy
+        </div>
     </div>
 </main>

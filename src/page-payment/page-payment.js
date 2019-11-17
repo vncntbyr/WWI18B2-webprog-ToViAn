@@ -43,6 +43,16 @@ class PagePayment {
         //Event Listener für den Weiter Knopf
         pageDom.querySelector("#next").addEventListener("click", () => this.switchpage(this.counter));
 
+        //Event Listener für Zahlmethoden
+        pageDom.querySelector("#paypal").addEventListener("click", () => this.openpaypalmodal());
+        pageDom.querySelector("#creditcard").addEventListener("click", () => this.opencreditcardmodal());
+        pageDom.querySelector("#transaction").addEventListener("click", () => this.opentransactionmodal());
+
+        //Event Listener für Schließen der Modals
+        pageDom.getElementsByClassName("close1")[0].addEventListener("click", () => this.closepaypalmodal());
+        pageDom.getElementsByClassName("close2")[0].addEventListener("click", () => this.closecreditcardmodal());
+        pageDom.getElementsByClassName("close3")[0].addEventListener("click", () => this.closetransactionmodal());
+
         this._app.setPageTitle(`Startseite`, {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
@@ -81,6 +91,24 @@ class PagePayment {
             break;
 
         }
+    }
+    openpaypalmodal(){
+        document.querySelector("#paypalmodal").style.display = "block";
+    }
+    opencreditcardmodal(){
+        document.querySelector("#creditcardmodal").style.display = "block";
+    }
+    opentransactionmodal(){
+        document.querySelector("#transactionmodal").style.display = "block";
+    }
 
-}
+    closepaypalmodal(){
+        document.querySelector("#paypalmodal").style.display = "none";
+    }
+    closecreditcardmodal(){
+        document.querySelector("#creditcardmodal").style.display = "none";
+    }
+    closetransactionmodal(){
+        document.querySelector("#transactionmodal").style.display = "none";
+    }
 }
