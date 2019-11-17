@@ -76,6 +76,8 @@ class PageOverview {
         });
     }
 
+
+    /** Veränderung der Titel je nach eingeblendeter Kategorie die durch eine 2-stellige Zahl übergeben wird */
     filter(pageDom, n){
 
       switch (n) {
@@ -106,6 +108,7 @@ class PageOverview {
     break;
 }
 
+        /** Ersetzen der Tiles je nach selektierter Kategorie aus dem Navigationsbereich */
         let mainElement = pageDom.querySelector("main");
         let templateElement = pageDom.querySelector("#template-tile");
 
@@ -121,7 +124,7 @@ class PageOverview {
     }
 
     reload(pageDom) {
-        document.querySelector(" header .wrapper #title").innerHTML ="Produktübersicht";
+        document.querySelector(" header .wrapper #title").innerHTML ="Produktübersicht"; /** Zurücksetzen des Titels nach Klick auf Start */
         this._renderHardwareTiles(pageDom);
         this._app.setPageContent(pageDom.querySelector("main"));
 

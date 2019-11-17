@@ -98,7 +98,7 @@ class App {
         document.querySelector("header nav .loggedin").style.display="none";
     }
 
-    // Gibt Nutzer Information: Zum Warenkorb hinzugefügt
+    // Mit Klick auf den Miet-Button wird der Warenkorb innerhalb der Kopfleiste um 1 erhöht. Der Counter wird selbst beim wechseln der Items nicht zurückgesetzt.
     _hinzugefuegtM(counter) {
 
       this.counter = this.counter + 1;

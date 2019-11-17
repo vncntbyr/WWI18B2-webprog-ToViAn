@@ -185,7 +185,7 @@ header nav .loggedin .information a{
   background-color:rgb(33, 19, 70);
   color: rgb(250, 197, 24);
 }
-
+/* Karte innerhalb der Navigationsleiste rechts positioniert */
 #map {
   float: right;
   margin-right: 0.5em;
@@ -227,7 +227,7 @@ header .content h6 {
 
 /* Bearbeitung der Search-Bar */
 .topnav {
-  width: 55%;
+  width: 50%;
 }
 
 .topnav input[type=text] {
@@ -254,7 +254,7 @@ header .content h6 {
     float: none;
   }
 
-  .topnav{
+  .topnav {
     width:105%;
     margin-bottom: 3em;
   }
@@ -266,6 +266,7 @@ header .content h6 {
 }
 
 @media (min-width: 1080px) {
+
   .small-screen-only {
     display: none !important;
   }
@@ -274,6 +275,7 @@ header .content h6 {
     display: none;
   }
 
+  /* Verstecken der Inhalte, die der Navigationsleiste ähneln */
   .hide {
     margin-top: 10em;
     display: none;
@@ -307,7 +309,7 @@ header .content h6 {
     flex: 1;
   }
 }
-
+/* Highlighter der am unteren Bildschirmrand angebracht ist, wird angepasst */
 .highlighter {
   position: fixed;
   left: 0;
@@ -320,7 +322,7 @@ header .content h6 {
   border-top-left-radius: 60px 30px;
   border-top-right-radius: 60px 30px;
 }
-
+/* Footer der am ende der Seite, wird angepasst */
 .footer-background {
   width: 100%;
   height: 16em;
@@ -328,29 +330,33 @@ header .content h6 {
   border-top-left-radius: 60px 30px;
   border-top-right-radius: 60px 30px;
 }
-
+/* Erster Teil des Bildes der Bezahlmöglichkeiten */
 .part1 {
   max-width: 49%;
   border-top-left-radius: 60px 30px;
   border-top-right-radius: 60px 30px;
 }
-
+/* Zweiter Teil des Bildes der Bezahlmöglichkeiten */
 .part2 {
   max-width: 49%;
   border-top-left-radius: 60px 30px;
   border-top-right-radius: 60px 30px;
 }
+/* Anpassung der Bezahlmöglichkeiten, des Highlighters, des Footers sowie deren Inhalte im Mobile Format */
+@media (max-width: 1080px) {
 
-@media (max-width: 1080px) { /* Wenn man drunter fällt */
   .part1 {
     max-width: 98%;
   }
+
   .part2 {
     max-width: 98%;
   }
+
   .highlighter {
     font-size: 0.7em;
   }
+
 }
 
 .footer-table {
@@ -398,7 +404,7 @@ th {
   padding-right: 3%;
 }
 
-@media (max-width: 1080px) { /* Wenn man drunter fällt */
+@media (max-width: 1080px) { /* Weitere Anpassungen des Footers sowie dessen Inhalt an kleine Bildschirme */
 
   .footer-background {
     width: 100%;

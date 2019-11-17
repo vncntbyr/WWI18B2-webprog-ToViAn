@@ -19,6 +19,7 @@ header p {
   margin: 0.5em 0em 0em 1.25em;
 
 }
+
 /* Einzelne Kacheln */
 
 .container {
@@ -26,6 +27,8 @@ header p {
   background: #ffffff;
   border-radius: 40px;
   margin: 0.5em;
+  margin-left: 0.35em;
+  margin-right: auto;
   margin-top: 0;
   text-align: center;
   font-weight: bold;
@@ -34,6 +37,7 @@ header p {
   max-height: auto;
 }
 
+/* Effekt der Kacheln, sobald über diese gehovert wird */
 .container:hover {
   display: inline-block;
   background: #ffffff;
@@ -62,7 +66,7 @@ header p {
   transition: .5s ease;
   backface-visibility: hidden;
 }
-
+/* Knopf der erscheint, sobald über den Container gehovert wird */
 .container button {
   transition: .5s ease;
   opacity: 0;
@@ -72,32 +76,38 @@ header p {
   z-index:4;
 }
 
+/* Hiermit greift man auf die Farbe unter den Bildern zu! */
 .container a,
 .container a:visited {
-  /*Hiermit greift man auf die Farbe unter den Bildern zu!*/
   color: black;
   font-style: bold;
   text-decoration: none;
 }
 
+/* Verhalten des Bildes und des Button sobald über den Container gehovert wird */
 .container:hover img,
 .container:hover span{
   opacity: 0.3;
 }
+
 .container:hover button{
   opacity: 1;
   opacity-color: rgb(245, 166, 35);
 
 }
+
 .container .price {
   font-size:30pt;
   color:black;
 }
 
+/* Anpassungen der Ansicht/Container an mobile Endgeräte */
+
 @media (max-width: 1080px) {
 
     .container {
       opacity: 1;
+      margin-left: 0.6em;
     }
 
     .wrapper{
@@ -105,12 +115,10 @@ header p {
     }
 
     header p {
-
       color: white;
       font-weight: bolder;
       font-size: 2em;
       margin: 0em 0em 0em 0em;
-
     }
 
     .container button {
