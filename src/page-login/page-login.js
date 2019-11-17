@@ -72,7 +72,8 @@ class PageLogin {
                 document.querySelector("#submit").style.display ="none";
 
                 //Login und Registrieren ausblenden
-                document.querySelector("header nav .menu-right").style.display="none";
+                document.querySelector("header nav .menu-right #menu-right-login").style.display="none";
+                document.querySelector("header nav .menu-right #menu-right-register").style.display="none";
                 document.querySelector("header nav .loggedin").style.display="block";
                 //Seite nach 0.5s zur Startseite wechseln
                 setTimeout(function(){

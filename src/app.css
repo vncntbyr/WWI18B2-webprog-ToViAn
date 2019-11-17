@@ -148,10 +148,10 @@ header nav .loggedin .information{
   color:black;
   background-color:white;
   border-radius:40px;
-  width:12.5%;
+  width:10%;
   height:auto ;
   text-align:center;
-  transform: translate(-30%, 4.5%);
+  transform: translate(-40%, 4.5%);
 }
 header nav .loggedin .information ul{
   list-style: none;
