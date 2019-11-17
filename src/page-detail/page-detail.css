@@ -224,13 +224,18 @@
 /**
 * Preis
 */
-.container h3
+.preisK h3
 {
   margin: 0;
   padding: 0;
   font-size: 2.5em;
   color: #24105a;
   float: left;
+}
+
+.preisK span
+{
+  color: #24105a;
 }
 
 /**
