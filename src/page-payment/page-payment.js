@@ -106,11 +106,9 @@ class PagePayment {
         document.querySelector("#paypalmodal").style.display = "none";
     }
     closecreditcardmodal(){
-        alert("2");
         document.querySelector("#creditcardmodal").style.display = "none";
     }
     closetransactionmodal(){
-        alert("3");
         document.querySelector("#transactionmodal").style.display = "none";
     }
 }
