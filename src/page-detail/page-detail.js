@@ -37,33 +37,18 @@ class PageDetail {
 
         // Seite zur Anzeige bringen
         let pageDom = this._processTemplate(html);
-        /*this._renderDetails(html, 1);*/
 
         this._app.setPageTitle(`Startseite`, {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
 
-
-    }
-/*
-    _renderDetails(html, n) {
-
-            let data2 = this._app.database.getRecordById(n)
-
-            html = html.replace("{HREF}", `#/Detail/${data2.id}`);
-            html = html.replace("{IMG}", data2.img);
-            html = html.replace("{NAME}", data2.name);
-            html = html.replace("{PREIS}", data2.preis12);
-
-            pagedom.innerHTML += html;
-        });
     }
 
      /**
      * Hilfsmethode, welche den HTML-Code der eingelesenen HTML-Datei bearbeitet
      * und anhand der eingelesenen Daten ergänzt. Zusätzlich wird hier ein
-     * Event Handler für den Button registriert.
+     * Event Handler für die Inputs registriert.
      *
      * @param {HTMLElement} pageDom Wurzelelement der eingelesenen HTML-Datei
      * mit den HTML-Templates dieser Seite.
@@ -97,12 +82,15 @@ class PageDetail {
 
         // Event Handler für den Button registrieren
         pageDom.querySelectorAll(".id").forEach(e => e.textContent = this._recordId);
-        //pageDom.querySelector("#show-more-button").addEventListener("click", () => this._onShowMoreButtonClicked());
 
+        // Event Handler für die Inputs (Mietdauer) registrieren
         pageDom.querySelector("#einMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis1));
         pageDom.querySelector("#dreiMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis3));
         pageDom.querySelector("#sechsMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis6));
         pageDom.querySelector("#zwölfMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis12));
+
+        // Event Handler für den Leihbutton registrieren
+        pageDom.querySelector("#leihenButton").addEventListener("click", () => this._hinzugefuegtM());
 
 
         // Fertig bearbeitetes HTML-Element zurückgeben
@@ -110,8 +98,13 @@ class PageDetail {
     }
 
 
+        // Setzt je nach ausgewählter Mietdauer richtigen Preis
+        _PreisWechsel(preisNeu){
+        document.getElementById("preis").innerHTML = preisNeu + " €";
+        }
 
-    _PreisWechsel(preisNeu) {
-      document.getElementById("preis").innerHTML = preisNeu + " €";
+        // Gibt Nutzer Information: Zum Warenkorb hinzugefügt
+        _hinzugefuegtM(){
+          alert("Zum Warenkorb hinzugefügt");
         }
 }
