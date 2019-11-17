@@ -1,72 +1,70 @@
-<header>
-
-</header>
-
+<!-- HTML der Produktseite (Details) -->
 <main>
+  <!-- 1. Container für Produktbild & Kurzinfos -->
   <div class="container">
-
+  <!-- Produktbild -->
     <div class="imgBX">
       <img src="{IMG}" alt="" />
     </div>
-
+    <!-- Kurzinfos mit Name, Gesamtbewertung, Verüfgbarkeit Monatsausdwahl & Leihbutton  -->
     <div class="details">
       <div class="content">
         <h2>{NAME}<br><span>
-
+          <!-- Gesamtbewertung (Sterne) -->
           <span class="sternebewertung">
-            <label id="5er" value="5" for="stern5" title="5 Sterne">5 Sterne</label>
+            <label value="5" for="stern4" title="5 Sterne">5 Sterne</label>
             <label value="4" for="stern4" title="4 Sterne">4 Sterne</label>
             <label value="3" for="stern3" title="3 Sterne">3 Sterne</label>
             <label value="2" for="stern2" title="2 Sterne">2 Sterne</label>
             <label value="1" for="stern1" title="1 Stern">1 Stern</label>
-
           </span></h2>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-
+          <!-- Verfügbarkeit -->
           <img src="{VERFÜGBAR}" alt="">
-
+          <!-- Mietdauerauswahl -->
           <h4>Mindestmietdauer wählen:</h4>
-
-
+          <!-- Inputs für die Mietdauerauswahl -->
           <div class="radio-pillbox">
             <radiogroup>
               <div>
-                <input type="radio" name="radio-group" id="einMonat" value="JavaScript" class="first">
-                <label for="js" class="radio-label">1</label>
+                <input type="radio" name="radio-group" id="einMonat" class="first">
+                <label class="radio-label">1</label>
                 </input>
               </div>
               <div>
-                <input type="radio" name="radio-group" id="dreiMonat" value="HTML5">
-                <label for="tricky">3</label>
+                <input type="radio" name="radio-group" id="dreiMonat">
+                <label>3</label>
                 </input>
               </div>
               <div>
-                <input type="radio" name="radio-group" id="sechsMonat" value="CSS3">
-                <label for="css">6</label>
+                <input type="radio" name="radio-group" id="sechsMonat">
+                <label>6</label>
                 </input>
               </div>
               <div>
-                <input type="radio" name="radio-group" id="zwölfMonat" value="AngularJS">
-                <label for="angularjs">12</label>
+                <input type="radio" name="radio-group" id="zwölfMonat">
+                <label>12</label>
                 </input>
               </div>
             </radiogroup>
           </div>
 
-              <h3 id="preis">{PREIS12} €</h3>
-              <button id="leihenButton"">Jetzt leihen</button>
+          <!-- Preis -->
+          <h3 id="preis">{PREIS12} €</h3>
+
+          <!-- Leihbutton -->
+          <button id="leihenButton"">Jetzt leihen</button>
         </div>
       </div>
     </div>
 
-
+<!-- 2. Container für Technische Details & Weitere Artikel -->
 <div class="containerZ">
 
+<!-- Technische Details -->
   <div class="infoBX">
-
-
       <div class="content">
 
         <h2>Technische Details</h2>
@@ -95,19 +93,15 @@
       </div>
   </div>
 
-
+<!-- Weitere Artikel -->
   <div class="wArtikel">
     <div class="content">
 
-
-
       <h2>Dauerbrenner</h2>
-
 
       <table>
         <tbody>
           <tr>
-
             <td>
               <a href="#/Detail/1">
                 <div class="img"><img alt="" src="images/canoneos200d.png"></div>
@@ -119,7 +113,6 @@
                 </div>
               </a>
             </td>
-
             <td>
               <a href="#/Detail/3">
                 <div class="img"><img alt="" src="images/acernitro.png"></div>
@@ -131,7 +124,6 @@
                 </div>
               </a>
             </td>
-
           </tr>
           <tr>
             <td>
@@ -145,7 +137,6 @@
                 </div>
               </a>
             </td>
-
             <td>
               <a href="#/Detail/6">
                 <div class="img"><img alt="" src="images/Roccatvulcan.png"></div>
@@ -157,22 +148,19 @@
                 </div>
               </a>
             </td>
-
           </tr>
         </tbody>
       </table>
     </div>
-
   </div>
-
 </div>
 
-
+<!-- 3. Conainter für eigene Produktbewertung -->
 <div class="containerBewerten">
 
   <div class="bewerten">
     <div class="content">
-
+      <!-- Sterneauswahl 1-5 -->
       <h2>Produktbewertung abgeben</h2>
       <span class="eigenebewertung">
         <input type="radio" id="stern5" name="eigenebewertung" value="5"><label for="stern5" title="5 Sterne">5 Sterne</label>
@@ -182,13 +170,7 @@
         <input type="radio" id="stern1" name="eigenebewertung" value="1"><label for="stern1" title="1 Stern">1 Stern</label>
       </span>
     </div>
-
   </div>
-
 </div>
-
-
-
-
 
 </main>
