@@ -77,7 +77,7 @@ class PageOverview {
     }
 
 
-    /** Veränderung der Titel je nach eingeblendeter Kategorie */
+    /** Veränderung der Titel je nach eingeblendeter Kategorie die durch eine 2-stellige Zahl übergeben wird */
     filter(pageDom, n){
 
       switch (n) {
