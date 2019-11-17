@@ -91,7 +91,7 @@
 #content-adress{
     display:none;
 }
-#content-adress input[type= "text"] {
+#content-adress input[type= "text"], .modal-content input[type="password"], .modal-content input[type="text"] {
     border: 0;
     background: none;
     display: block;
