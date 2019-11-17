@@ -12,7 +12,6 @@ class PageDetail {
         this._app = app;
         this._recordId = -1;
         this._data = null;
-
     }
 
     /**
@@ -89,22 +88,15 @@ class PageDetail {
         pageDom.querySelector("#sechsMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis6));
         pageDom.querySelector("#zwölfMonat").addEventListener("click", () => this._PreisWechsel(this._data.preis12));
 
-        // Event Handler für den Leihbutton registrieren
-        pageDom.querySelector("#leihenButton").addEventListener("click", () => this._hinzugefuegtM());
-
+        //Warenkorb EventListener
+        pageDom.querySelector("#leihenButton").addEventListener("click", () => this._app._hinzugefuegtM(this._app.counter));
 
         // Fertig bearbeitetes HTML-Element zurückgeben
         return pageDom;
     }
 
-
         // Setzt je nach ausgewählter Mietdauer richtigen Preis
         _PreisWechsel(preisNeu){
         document.getElementById("preis").innerHTML = preisNeu + " €";
-        }
-
-        // Gibt Nutzer Information: Zum Warenkorb hinzugefügt
-        _hinzugefuegtM(){
-          alert("Zum Warenkorb hinzugefügt");
         }
 }

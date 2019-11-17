@@ -121,6 +121,7 @@ class PageOverview {
     }
 
     reload(pageDom) {
+        document.querySelector(" header .wrapper #title").innerHTML ="Produktübersicht";
         this._renderHardwareTiles(pageDom);
         this._app.setPageContent(pageDom.querySelector("main"));
 

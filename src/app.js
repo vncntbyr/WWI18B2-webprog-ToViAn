@@ -31,6 +31,7 @@ class App {
         this._title = title;
         this._pages = pages;
         this._currentPageObject = null;
+        this.counter = 0;
 
 
         // Datenbank-Objekt zum Lesen und Speichern von Daten
@@ -47,13 +48,12 @@ class App {
         document.querySelector("header nav .toggle-menu a").addEventListener("click", this._toggleHamburgerMenu);
         document.querySelector("header nav .go-back a").addEventListener("click", () => window.history.back());
 
-            //Event Listener für Modal bei Hovern des Accounts
+          //Event Listener für Modal bei Hovern des Accounts
         document.querySelector("header nav .loggedin").addEventListener("mouseover", () => this.modalon());
         document.querySelector("header nav .loggedin").addEventListener("mouseout", () => this.modaloff());
 
         //Logout Button
         document.querySelector("header nav .loggedin #logout").addEventListener("click", () => this.logout());
-
 
         // Single Page Router starten und die erste Seite aufrufen
         window.addEventListener("hashchange", () => this._handleRouting());
@@ -97,6 +97,15 @@ class App {
         document.querySelector("header nav .menu-right").style.display="flex";
         document.querySelector("header nav .loggedin").style.display="none";
     }
+
+    // Gibt Nutzer Information: Zum Warenkorb hinzugefügt
+    _hinzugefuegtM(counter) {
+
+      this.counter = this.counter + 1;
+      let itemcounter = document.querySelector("#itemcount");
+
+      itemcounter.innerHTML = "(" + counter + ")";
+  }
 
 
     /**
