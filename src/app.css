@@ -135,9 +135,7 @@ header nav .menu-left li {
 /****************/
 /* Rechtes Menü */
 /****************/
-header nav .loggedin .test{
-  transform: translate(-30%, 10%);
-}
+
 header nav .loggedin {
   display:none;
 }
