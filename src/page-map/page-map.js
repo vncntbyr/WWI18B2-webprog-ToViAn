@@ -1,5 +1,3 @@
-
-
 /**
 *   Klasse PageMap:Ermöglicht dem Benutzer einen Abholort per Karte zu finden
 **/
@@ -34,10 +32,10 @@ class PageMap {
     pageDom.innerHTML = html;
 
 
-            this._app.setPageTitle(`Startseite`, {isSubPage: true});
-            this._app.setPageCss(css);
-            this._app.setPageHeader(pageDom.querySelector("header"));
-            this._app.setPageContent(pageDom.querySelector("main"));
+    this._app.setPageTitle(`Startseite`, {isSubPage: true});
+    this._app.setPageCss(css);
+    this._app.setPageHeader(pageDom.querySelector("header"));
+    this._app.setPageContent(pageDom.querySelector("main"));
 
   }
 }
