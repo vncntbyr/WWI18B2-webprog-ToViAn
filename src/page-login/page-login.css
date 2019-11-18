@@ -163,6 +163,12 @@ main a{
     color:white;
     padding: 5.5em;
 }
+.successfull{
+    display:none;
+    color: black;
+    padding:5.5em;
+    text-align: center;
+}
 
 /*Box anpassen für kleinere Geräte, dass es die Head Zeile nicht überlappt*/
 /*Ebenso Anpassung der Dateneingabe, damit es den Bildschirm nicht überschreitet --> keine Verlängerung sondern nur Farbänderung der Border*/

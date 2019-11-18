@@ -228,6 +228,21 @@ class Database {
                 category:   30,
             },
         ];
+        //Firebase Integration
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBIz7mhanUaKLpNpYWYAHIcH0jdJZ5AhU0",
+          authDomain: "rent-and-collect.firebaseapp.com",
+          databaseURL: "https://rent-and-collect.firebaseio.com",
+          projectId: "rent-and-collect",
+          storageBucket: "rent-and-collect.appspot.com",
+          messagingSenderId: "48552045033",
+          appId: "1:48552045033:web:b91d157aafae8835008378",
+          measurementId: "G-NC9NXL964D"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
     }
 
     /**
@@ -256,4 +271,55 @@ class Database {
         return this._data.filter(r => r.category === category);
     }
 
+    /*Erstellt einen User auf https://console.firebase.google.com/project/rent-and-collect/authentication/users*/
+    register(email, password){
+        firebase.auth().createUserWithEmailAndPassword(email, password);
+        let user = firebase.auth().currentUser;
+        user.sendEmailVerification();
+    }
+    /*Loggt User ein*/
+    login(email, password){
+        firebase.auth().signInWithEmailAndPassword(email, password);
+      }
+     /*Loggt User aus*/
+    logout(){
+     firebase.auth().signOut();
+    }
+    /*Wenn sich der Zustand (Logged in/Logged out) verändert, dann wird (if / else) ausgeführt*/
+    realtimeListener(){
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if(firebaseUser) {
+                console.log(firebaseUser);
+                document.querySelector("#hidden").style.display = "block";
+                document.querySelector("#email").style.display ="none";
+                document.querySelector("#password").style.display ="none";
+                document.querySelector("#submit").style.display ="none";
+                this.getUsername();
+                //Login und Registrieren ausblenden
+                document.querySelector("header nav .menu-right #menu-right-login").style.display="none";
+                document.querySelector("header nav .menu-right #menu-right-register").style.display="none";
+                document.querySelector("header nav .loggedin").style.display="block";
+                //Seite nach 0.5s zur Startseite wechseln
+                setTimeout(function(){
+                    window.location.href = "/#"}
+                , 400);
+            } else {
+                console.log("not logged in");
+                document.querySelector("#email").value = "";
+                document.querySelector("#password").value ="";
+            }
+        });
+    }
+    //Bei vergessen des Passwortes wird hierdurch eine Email versendet, welche zum Zurücsetzen des Passwortes auffordert
+    resetMail(emailAddress){
+        firebase.auth().sendPasswordResetEmail(emailAddress);
+    }
+    getUsername(){
+        let user = firebase.auth().currentUser;
+        if (user != null){
+            let email = user.email;
+            email = email.substring(0,email.indexOf("@"));
+            document.querySelector(".loggedin .account .username").innerHTML = email;
+        }
+    }
 }

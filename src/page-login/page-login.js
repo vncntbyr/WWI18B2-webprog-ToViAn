@@ -61,41 +61,17 @@ class PageLogin {
     submitform(e) {
         //Nachladen verhindern bzw Submit Button hat jetzt keine Funktion (wegen des Umfangs)
         e.preventDefault();
-
-        //Abgleich mit Datenbank, ob die Werte übereinstimmen
-        if(document.querySelector("#email").value.toLowerCase() == "testemail@test.de"
-            && document.querySelector("#password").value == "42") {
-                //Login funktioniert
-                document.querySelector("#hidden").style.display = "block";
-                document.querySelector("#email").style.display ="none";
-                document.querySelector("#password").style.display ="none";
-                document.querySelector("#submit").style.display ="none";
-
-                //Login und Registrieren ausblenden
-                document.querySelector("header nav .menu-right #menu-right-login").style.display="none";
-                document.querySelector("header nav .menu-right #menu-right-register").style.display="none";
-                document.querySelector("header nav .loggedin").style.display="block";
-                //Seite nach 0.5s zur Startseite wechseln
-                setTimeout(function(){
-                    window.location.href = "/#"}
-                , 400);
-            } else {
-                alert("Die Eingegebenen Daten sind falsch");
-                document.querySelector("#email").value = "";
-                document.querySelector("#password").value ="";
-                //funktioniertnichtdiv.style.display="block";
-                //unsichtbares Div zum Anzeigen bringen/Text erzeugen der sagt, dass der Login fehlgeschlagen ist
-                //zusätzlich rotes Anzeigen der Login Felder
-            }
+        const promise = this._app.database.login(document.querySelector("#email").value, document.querySelector("#password").value);
+        this._app.database.realtimeListener();
     }
     sendmail(e) {
         //Nachladen verhindern bzw Submit Button hat jetzt keine Funktion (wegen des Umfangs)
         e.preventDefault();
-        if(document.querySelector("#resetemail").value.toLowerCase() == "testemail@test.de"){
-            alert("Ihr Passwort ist: 42");
-        } else {
-            alert("Zu ihrer Email wurde kein Passwort gefunden");
-        }
+        this._app.database.resetMail(document.querySelector("#resetemail").value);
+
+        document.querySelector("#resetemail").style.display ="none";
+        document.querySelector("#resetsubmit").style.display ="none";
+        document.querySelector(".successfull").style.display ="block";
 
 
     }

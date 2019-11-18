@@ -45,7 +45,6 @@ class PageRegister {
     stopsubmit(e){
         //Nachladen verhindern bzw Submit Button hat jetzt keine Funktion (wegen des Umfangs)
         e.preventDefault();
-
         if(document.getElementById("vorname").value == "" || document.getElementById("nachname").value =="" || document.getElementById("password").value =="") {
             //Felder wurden nicht ausgefüllt
             alert("Bitte Angaben machen");
@@ -55,6 +54,8 @@ class PageRegister {
             document.getElementById("password").value ="";
         } else {
             //Jedes notwendige Feld wurde auusgefüllt
+            this._app.database.register(document.getElementById("email").value, document.getElementById("password").value);
+            this._app.database.realtimeListener();
             document.getElementById("vorname").value = "";
             document.getElementById("nachname").value ="";
             document.getElementById("email").value = "";
@@ -66,14 +67,6 @@ class PageRegister {
             document.getElementById("email").style.display ="none";
             document.getElementById("password").style.display ="none";
             document.getElementById("submit").style.display ="none";
-
-            //nach kurzem Warten wird man zum Login weitergeführt
-            setTimeout(function(){
-                window.location.href = "/#/Login"}
-            , 550);
         }
     }
-
-
-
 }

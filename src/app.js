@@ -94,6 +94,7 @@ class App {
 
     //Logout Funktionieren
     logout(){
+        this.database.logout();
         document.querySelector("header nav .menu-right #menu-right-login").style.display="block";
         document.querySelector("header nav .menu-right #menu-right-register").style.display="block";
         document.querySelector("header nav .loggedin").style.display="none";
