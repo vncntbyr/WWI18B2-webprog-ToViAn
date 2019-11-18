@@ -17,17 +17,15 @@ Die Funktionalitäten unserer Webseite der rent&collect GmbH lassen sich folgend
 4. Mit Klick auf den "Jetzt Leihen" Knopf wird dem Warenkorb ein Produkt hinzugefügt, wie es auch im Header der Seite sichtbar wird,
    indem sich die Zahl dort erhöht.
 
-5. Im rechten Bildschirmrand ist es möglich sich mit einem bestehenden Konto einzuloggen oder zu registrieren.
-   Sobald man sich erfolgreich registriert hat, wird man folgend auf den Login-Bereich weitergeleitet.
+5. Im rechten, oberen Bildschirmrand ist es möglich sich mit einem bestehenden Konto einzuloggen oder zu registrieren.
 
-6. Innerhalb des Login-Bereiches ist es innerhalb des Tests möglich sich mit folgenden Daten anzumelden:
+   5.1 Sobald man sich erfolgreich registriert hat, wird man automatisch eingeloggt und wird auf die Startseite     zurückgeleitet. (Es wird außerdem ein Bestätigungslink per Mail verschickt.)
 
-   E-mail: testemail@test.de
-   Passwort: 42
+   5.2 Innerhalb des Login-Bereiches ist es möglich sich anzumelden:
+        - Hierbei wird nur die Email und das Passwort berücksichtigt, um einen User in Firebase anzulegen
+        - Nach dem Login wird man automatisch auf die Startseite zurückgeleitet
+        - Der Name vor dem @ in der Email wird hierbei als Name gesetzt und am oberen rechten Bildschirmrand als Accountname angezeigt
 
-   mit einem klick auf Login wird dem Benutzer rechts am oberen Bildschirmrand der Accountname angezeigt.
-
-7. Innerhalb des Login-Bereichs ist es darüber hinaus möglich, bei vergessen des Passworts auf "Passwort vergessen?" zu klicken, hierbei
-   erscheint ein Fenster, in welchem die Testmail aus Punkt 6. eingegeben werden kann, woraufhin das Passwort dargestellt wird.
+7. Innerhalb des Login-Bereichs ist es darüber hinaus möglich, bei vergessen des Passworts auf "Passwort vergessen?" zu klicken, hierbei erscheint ein Fenster, die Email abgefragt wird. Nach Eingabe der Email wird innerhalb von zwei Minuten eine automatisierte Email in das Postfach geschickt, welche mithilfe eines Links zum Bereich weiterleitet, in welchem das Passwort zurückgesetzt werden kann
 
 8. Mit Login ist es dem Kunden möglich verfügbare Abholstandorte anzeigen zu lassen, den Checkout durchführen oder sich auszuloggen.  
